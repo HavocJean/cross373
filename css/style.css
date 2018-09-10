@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* menu */
+
+.navbar {
+  margin-bottom: 0;
+  color: white;
+  margin: auto;
+  background-color: black;
+  border-color: rgba(231, 231, 231, 0);
+
+}
+.navbar-nav {
+  margin: auto;
+
+}
+
+/* Horarios e galeria */
+
+.parallaxhorarios {
+  background-image: url('../img/bgfitness1.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.parallaxgaleria {
+  background-image: url('../img/bgfitness1.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+h2 {
+margin: 0 0 20px 0;
+font-weight: 500;
+font-size: 34px;
+color: #fff;
+text-transform: uppercase;
+
+}
+
+.textogaleria {
+text-align: center;
+color: white;
+padding-top: 40px;
+}
+.textohorarios {
+text-align: center;
+color: white;
+padding: 50px;
+
+}
+
+/* Frase de efeito com parallax */
+
+.fraseefeito {
+  background-image: url('../img/bgfitness1.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding: 15px 0 0 0;
+}
+p {
+  margin: auto;
+}
+
+/* Sobre nós (imagem e texto) */
+
+.container-fluid {
+  padding: 0;
+}
+.sobrenos {
+  padding: 0;
+  background-image: url('../img/bgfitness1.jpg');
+  background-size: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.textosobre {
+  color: white;
+    background-color: rgba(255, 255,255, 0.3);
+  margin: auto;
+  padding: 100px;
+}
+
+.imgsobre {
+  background-image: url('../img/imgsobrenos.jpg');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+hr {
+height: 2px;
+width: 70px;
+text-align: center;
+position: relative;
+background: #cc1f34;
+border: 0;
+}
+
+/* divs dos horários e modalidades */
+
+h2.menu-section-title {
+  font-family: sans-serif;
+  color: black;
+}
+.menu-section {
+  padding: 50px;
+}
+.modhorario {
+  border-bottom: 0.5px dotted #cc1f34;
+  width: 10%;
+  margin: auto;
+  text-align: center;
+}
+.botaocontato {
+
+  cursor: pointer;
+  margin:auto;
+}
+.card {
+  margin: auto;
+}
+
+/* grid das fotos */
+
+.row {
+  margin: 0;
+}
+.galeria {
+  margin: 50px 0;
+}
+
+/* Footer */
+.clear_both{
+  width: 100%;
+  height: 1px;
+  clear: both;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 700px;
+}
+
+iframe {
+  width: 300px;
+  height: 150px;
+}
+
+/* Newsletter */
+
+
+.newsletter {
+
+  margin-bottom: 2%;
+  padding: 1%;
+  background-color: #8D8D8D;
+  text-align: left;
+}
+.btn {
+  margin-left: 1%;
+}
+
+input {
+
+  text-align: left;
+}
+
+.textonews {
+  margin: auto;
+  text-align: right;
+}
+
+.socialicon {
+  margin-right: 50px;
+}
+
+.social {
+  margin-bottom: 2%;
+}
+
+.contatos {
+  width: 35%;
+  margin: auto;
+  margin-bottom: 2%;
+}
+
+/* store */
+
+.bannerstore {
+  height: 400px;
+  background-image: url('../img/bgstore.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.bannerbg {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.planos {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.planos>hr{
+  margin: 0 auto;
+}
+
+/* menu store */
+.menustore {
+  background-color: black;
+  height: 100%;
+}
+
+.menublank {
+
+  height: 100%;
+}
+
+.titulomenu {
+
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+
+.listamenu {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  color: white;
+}
+.listamenu li {
+
+  text-align: center;
+  margin: auto;
+}
+#titulobanner {
+  margin-top: 180px;
+  font-weight: bold;
+  font-size: 4em;
+}
