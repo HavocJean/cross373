@@ -54,147 +54,146 @@
     <br>
     <br>
     <br>
-    <fieldset>
-      <legend>Cadastro</legend>
-
-
-          <form class="" action="index.html" method="post">
-            <label for="nome">Nome:</label><br>
-            <input type="text" name="nome" value=""><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" value=""><br><br>
-            <label for="nascimento">Data Nascimento:</label><br>
-            <input type="date" name="nascimento" value=""><br><br>
-            <label for="sexo">Sexo:</label><br>
-            <select  name="sexo">
-              <option value="selecione" selected disabled>Selecione...</option>
-              <option value="masculino">Masculino</option>
-              <option value="feminino">Feminino</option>
-              <option value="outro">Outro</option>
-            </select><br><br>
-            <label for="cpf">CPF:</label><br>
-            <input type="text" name="cpf" value=""><br><br>
-            <label for="estado-civil">Estado Civil:</label><br>
-            <select  name="estado-civil">
-              <option value="selecione" selected disabled>Selecione...</option>
-              <option value="solteiro">Solteiro(a)</option>
-              <option value="casado">Casado(a)</option>
-              <option value="viuvo">Viuvo(a)</option>
-              <option value="separado">Separado(a)</option>
-              <option value="divorciado">Divorciado(a)</option>
-            </select><br><br>
-            <label for="rg">RG:</label><br>
-            <input type="text" name="rg" value=""><br><br>
-            <label for="profissao">Profissão:</label><br>
-            <input type="text" name="profissao" value=""><br><br>
-            <label for="nome-responsavel">Nome Responsável:</label><br>
-            <input type="text" name="nome-responsavel" value=""><br><br>
-            <label for="cpf-responsavel">CPF Responsável:</label><br>
-            <input type="text" name="cpf-responsavel" value=""><br><br>
-            <label for="fone-responsavel">Fone Responsável:</label><br>
-            <input type="text" name="fone-responsavel" value=""><br><br>
-            <label for="profissao-responsavel">Profissão Responsavel:</label><br>
-            <input type="text" name="´profissao-responsavel" value=""><br><br>
-            <h2>DADOS DE EMERGÊNCIA</h2>
-            <label for="contato-emergencia">Contato de Emergência:</label><br>
-            <input type="text" name="contato-emergencia" value=""><br><br>
-            <label for="telefone-emergencia">Telefone de Emergência:</label><br>
-            <input type="text" name="telefone-emergencia" value=""><br><br>
-            <label for="celular-emergencia">Celular de Emergência:</label><br>
-            <input type="text" name="celular-emergencia" value=""><br><br>
-            <label for="obs">Observações:</label><br>
-            <textarea name="obs" rows="8" cols="80"></textarea><br><br>
-            <h2>CONTATO</h2>
-            <select name="contato">
-              <option value="selecione" selected disabled>Selecione...</option>
-              <option value="celular">Celular</option>
-              <option value="telefone-residencial">Telefone Residencial</option>
-              <option value="telefone-comercial">Telefone Comercial</option>
-              <option value="facebook">Facebook</option>
-              <option value="nextel">Nextel</option>
-              <option value="skype">Skype</option>
-              <option value="twitter">Twitter</option>
-            </select><br><br>
-            <h2>ENDEREÇO</h2>
-            <label for="tipo">Tipo:</label><br>
-            <select name="tipo">
-              <option value="selecione" selected disabled>Selecione...</option>
-              <option value="residencial">Residencial</option>
-              <option value="comercial">Comercial</option>
-            </select><br><br>
-            <label for="cep">CEP:</label><br>
-            <input type="text" name="cep" value=""><br><br>
-            <label for="endereco">Endereço:</label><br>
-            <input type="text" name="endereco" value=""><br><br>
-            <label for="numero">Numero:</label><br>
-            <input type="text" name="numero" value=""><br><br>
-            <label for="complemento">Complemento:</label><br>
-            <input type="text" name="complemento" value=""><br><br>
-            <label for="bairro">Bairro:</label><br>
-            <input type="text" name="bairro" value=""><br><br>
-            <label for="cidade">Cidade:</label><br>
-            <input type="text" name="cidade" value=""><br><br>
-            <label for="uf">UF:</label><br>
-            <select name="uf">
-              <option value="selecione" selected disabled>Selecione...</option>
-              <option value="acre">AC</option>
-              <option value="alagoas">AL</option>
-              <option value="amazonas">AM</option>
-              <option value="amapa">AP</option>
-              <option value="bahia">BA</option>
-              <option value="ceara">CE</option>
-              <option value="df">DF</option>
-              <option value="espirito-santo">ES</option>
-              <option value="goias">GO</option>
-              <option value="maranhao">MA</option>
-              <option value="mato-grosso">MT</option>
-              <option value="mato-grosso-sul">MS</option>
-              <option value="minas">MG</option>
-              <option value="para">PA</option>
-              <option value="paraiba">PB</option>
-              <option value="parana">PR</option>
-              <option value="pernambuco">PE</option>
-              <option value="piaui">PI</option>
-              <option value="rio-janeiro">RJ</option>
-              <option value="rio-grande-norte">RN</option>
-              <option value="rio-grande-sul">RS</option>
-              <option value="rondonia">RO</option>
-              <option value="roraima">RR</option>
-              <option value="santa-catarina">SC</option>
-              <option value="sao-paulo">SP</option>
-              <option value="sergipe">SE</option>
-              <option value="tocantins">TO</option>
-            </select><br><br>
-            <h2>INFORMAÇÕES ADICIONAIS</h2>
-            <label for="tipo-visita">Tipo da Visita:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="modalidades">Modalidades/Interesses:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="nivel-interesse">Nivel de interesse:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="como-conheceu">Como conheceu:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="objetivo">Objetivo principal:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="avalicao">Availiação DISC:</label><br>
-            <select name="">
-              <option value="selecione" selected disabled>Selecione...</option>
-            </select><br><br>
-            <label for="observacao">Observação:</label><br>
-            <textarea name="observacao" rows="8" cols="80"></textarea><br><br>
-            <input type="submit" name="" value="Enviar">
-          </form>
-      </fieldset>
+      
+    <form class="" action="index.html" method="post">
+      <fieldset>
+        <legend>Cadastro</legend>
+              <label for="nome">Nome:</label><br>
+              <input type="text" name="nome" value=""><br><br>
+              <label for="email">Email:</label><br>
+              <input type="email" name="email" value=""><br><br>
+              <label for="nascimento">Data Nascimento:</label><br>
+              <input type="date" name="nascimento" value=""><br><br>
+              <label for="sexo">Sexo:</label><br>
+              <select  name="sexo">
+                <option value="selecione" selected disabled>Selecione...</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+              </select><br><br>
+              <label for="cpf">CPF:</label><br>
+              <input type="text" name="cpf" value=""><br><br>
+              <label for="estado-civil">Estado Civil:</label><br>
+              <select  name="estado-civil">
+                <option value="selecione" selected disabled>Selecione...</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="viuvo">Viuvo(a)</option>
+                <option value="separado">Separado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+              </select><br><br>
+              <label for="rg">RG:</label><br>
+              <input type="text" name="rg" value=""><br><br>
+              <label for="profissao">Profissão:</label><br>
+              <input type="text" name="profissao" value=""><br><br>
+              <label for="nome-responsavel">Nome Responsável:</label><br>
+              <input type="text" name="nome-responsavel" value=""><br><br>
+              <label for="cpf-responsavel">CPF Responsável:</label><br>
+              <input type="text" name="cpf-responsavel" value=""><br><br>
+              <label for="fone-responsavel">Fone Responsável:</label><br>
+              <input type="text" name="fone-responsavel" value=""><br><br>
+              <label for="profissao-responsavel">Profissão Responsavel:</label><br>
+              <input type="text" name="´profissao-responsavel" value=""><br><br>
+              <h2>DADOS DE EMERGÊNCIA</h2>
+              <label for="contato-emergencia">Contato de Emergência:</label><br>
+              <input type="text" name="contato-emergencia" value=""><br><br>
+              <label for="telefone-emergencia">Telefone de Emergência:</label><br>
+              <input type="text" name="telefone-emergencia" value=""><br><br>
+              <label for="celular-emergencia">Celular de Emergência:</label><br>
+              <input type="text" name="celular-emergencia" value=""><br><br>
+              <label for="obs">Observações:</label><br>
+              <textarea name="obs" rows="8" cols="80"></textarea><br><br>
+              <h2>CONTATO</h2>
+              <select name="contato">
+                <option value="selecione" selected disabled>Selecione...</option>
+                <option value="celular">Celular</option>
+                <option value="telefone-residencial">Telefone Residencial</option>
+                <option value="telefone-comercial">Telefone Comercial</option>
+                <option value="facebook">Facebook</option>
+                <option value="nextel">Nextel</option>
+                <option value="skype">Skype</option>
+                <option value="twitter">Twitter</option>
+              </select><br><br>
+              <h2>ENDEREÇO</h2>
+              <label for="tipo">Tipo:</label><br>
+              <select name="tipo">
+                <option value="selecione" selected disabled>Selecione...</option>
+                <option value="residencial">Residencial</option>
+                <option value="comercial">Comercial</option>
+              </select><br><br>
+              <label for="cep">CEP:</label><br>
+              <input type="text" name="cep" value=""><br><br>
+              <label for="endereco">Endereço:</label><br>
+              <input type="text" name="endereco" value=""><br><br>
+              <label for="numero">Numero:</label><br>
+              <input type="text" name="numero" value=""><br><br>
+              <label for="complemento">Complemento:</label><br>
+              <input type="text" name="complemento" value=""><br><br>
+              <label for="bairro">Bairro:</label><br>
+              <input type="text" name="bairro" value=""><br><br>
+              <label for="cidade">Cidade:</label><br>
+              <input type="text" name="cidade" value=""><br><br>
+              <label for="uf">UF:</label><br>
+              <select name="uf">
+                <option value="selecione" selected disabled>Selecione...</option>
+                <option value="acre">AC</option>
+                <option value="alagoas">AL</option>
+                <option value="amazonas">AM</option>
+                <option value="amapa">AP</option>
+                <option value="bahia">BA</option>
+                <option value="ceara">CE</option>
+                <option value="df">DF</option>
+                <option value="espirito-santo">ES</option>
+                <option value="goias">GO</option>
+                <option value="maranhao">MA</option>
+                <option value="mato-grosso">MT</option>
+                <option value="mato-grosso-sul">MS</option>
+                <option value="minas">MG</option>
+                <option value="para">PA</option>
+                <option value="paraiba">PB</option>
+                <option value="parana">PR</option>
+                <option value="pernambuco">PE</option>
+                <option value="piaui">PI</option>
+                <option value="rio-janeiro">RJ</option>
+                <option value="rio-grande-norte">RN</option>
+                <option value="rio-grande-sul">RS</option>
+                <option value="rondonia">RO</option>
+                <option value="roraima">RR</option>
+                <option value="santa-catarina">SC</option>
+                <option value="sao-paulo">SP</option>
+                <option value="sergipe">SE</option>
+                <option value="tocantins">TO</option>
+              </select><br><br>
+              <h2>INFORMAÇÕES ADICIONAIS</h2>
+              <label for="tipo-visita">Tipo da Visita:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="modalidades">Modalidades/Interesses:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="nivel-interesse">Nivel de interesse:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="como-conheceu">Como conheceu:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="objetivo">Objetivo principal:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="avalicao">Availiação DISC:</label><br>
+              <select name="">
+                <option value="selecione" selected disabled>Selecione...</option>
+              </select><br><br>
+              <label for="observacao">Observação:</label><br>
+              <textarea name="observacao" rows="8" cols="80"></textarea><br><br>
+              <input type="submit" name="" value="Enviar">
+        </fieldset>
+      </form>
 
       <footer class="container-fluid" style="margin-top:20px">
           <div class="newsletter row">
@@ -241,7 +240,7 @@
             <br>
 
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.619127815446!2d-46.5999536!3d-23.6346273!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90450a21241cce54!2sAcademia+Nishida+Nata%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1536523586941" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.619127815446!2d-46.5999536!3d-23.6346273!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90450a21241cce54!2sAcademia+Nishida+Nata%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1536523586941" width="300" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
       </footer>
 
 

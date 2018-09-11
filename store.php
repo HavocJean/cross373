@@ -198,7 +198,7 @@
       <br>
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.619127815446!2d-46.5999536!3d-23.6346273!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90450a21241cce54!2sAcademia+Nishida+Nata%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1536523586941" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.619127815446!2d-46.5999536!3d-23.6346273!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90450a21241cce54!2sAcademia+Nishida+Nata%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1536523586941" width="300" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
 </footer>
 
 
