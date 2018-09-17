@@ -33,7 +33,7 @@
 					  <textarea class="form-control" rows="5" id="comment"></textarea>
 					</div>
 				</div>
-		          <button type="submit" class="btn btn-primary">Enviar</button>
+		          <button type="submit" class="btn btn-dark">Enviar</button>
 			</form>	
 		</div>	
 	</div>

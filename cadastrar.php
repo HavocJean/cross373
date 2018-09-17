@@ -119,17 +119,21 @@
           <br>
           <h4>Contato</h4>
           <div class="form-row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-3">
                 <label for="inputTel">Telefone</label>
-                <input type="phone" class="form-control" id="inputTel" placeholder="Telefone">
+                <input type="number" class="form-control" id="inputTel" placeholder="Telefone">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-3">
                 <label for="inputCel">Celular</label>
-                <input type="text" class="form-control" id="inputCel" placeholder="Celular">
+                <input type="number" class="form-control" id="inputCel" placeholder="Celular">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-3">
+                <label for="inputNomC">Nome Contato de Emergência</label>
+                <input type="text" class="form-control" id="inputNomC" placeholder="Nome">
+              </div>
+              <div class="form-group col-md-3">
                 <label for="inputConE">Contato Emergência</label>
-                <input type="text" class="form-control" id="inputConE" placeholder="9999-9999">
+                <input type="number" class="form-control" id="inputConE" placeholder="9999-9999">
               </div>
             </div>
 
@@ -215,7 +219,7 @@
        </div>
       
 
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-dark">Enviar</button>
         </form>
       </div>
     </div>

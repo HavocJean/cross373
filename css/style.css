@@ -189,32 +189,32 @@ footer {
 }
 
 
-/* Newsletter */
+/* Newsletter e footer */
 
 
 .newsletter {
-
-  margin-bottom: 2%;
-  padding: 1%;
   background-color: #8D8D8D;
-  text-align: left;
+  padding-top: 15px;
 }
 
 .btn {
   margin-left: 1%;
 }
 
-.camposnewsletter {
-  text-align: left;
+.textonews {
+  text-align: right;
 }
 
-.textonews {
-  margin: auto;
+.textonews p {
+  margin-top: 0px;
+  margin-top: 5px;
+  font-size: 20px;
   text-align: right;
 }
 
 .socialicon {
   margin-right: 50px;
+  margin-top: 10px;
 }
 
 .social {

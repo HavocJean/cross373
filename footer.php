@@ -1,18 +1,21 @@
 <footer class="container-fluid">
-    <div class="newsletter row">
-      <div class="textonews col-lg-5">
+    <div class="newsletter row col-lg-12">
+      <div class="textonews row col-lg-5">
           <p>Inscreva-se na nossa newsletter!</p>
       </div>
-
-        <div class="col-lg-7">
-          <form action="">
-            <div class="camposnewsletter">
-              <input type="text" placeholder="Name" name="name" required>
-              <input type="text" placeholder="Email address" name="mail" required>
-              <input class="btn btn-outline-light" type="submit" value="Inscreva-se">
+      <div class="col-lg-7">
+          <form action="" method="POST">
+             <div class="form-row">
+              <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <button type="submit" class="btn btn-dark" style="height:38px;">Cadastrar-se</button>
             </div>
           </form>
-        </div>
+      </div>
     </div>
 
       <div class="social">
@@ -28,7 +31,7 @@
             <button class="btn btn-danger" type="button" name="button">Agendar Free Pass </button>
           </div>
           <div class="col-lg-6">
-            <button class="btn btn-danger" type="button" name="button">Entre em Contato</button>
+            <a href="contato.php"><button class="btn btn-danger" type="button" name="button">Entre em Contato</button></a>
           </div>
 
         </div>
