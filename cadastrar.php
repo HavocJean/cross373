@@ -1,78 +1,74 @@
     <?php
     include("header.php");
     ?> 
+
     <div class="container-cad"> 
       <div class="cadastrodiv">
         <form  action="index.html" method="post">
           <br>
           <h4>Dados</h4>
             <div class="form-row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <label for="inputNome">Nome</label>
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <label for="inputSobrenome">Sobrenome</label>
                 <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
               </div>
             </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputEmail4">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Ex. jose@gmail.com">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputEmail5">Confirmar E-mail</label>
+                <input type="password" class="form-control" id="inputEmail5" placeholder="Ex. jose@gmail.com">
+              </div>
+            </div>
 
-          <div class="form-row">
-            <div class="form-group col-md-3">
-              <label for="inputRG">RG</label>
-              <input type="number" class="form-control" id="inputRG">
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="inputRG">RG</label>
+                <input type="number" class="form-control" id="inputRG">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputCPF">CPF</label>
+                <input type="number" class="form-control" id="inputCPF">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputSexo">Sexo</label>
+                <select id="inputSexo" class="form-control">
+                  <option selected>Escolha...</option>
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="telefone">Celular</label>
+                <input type="telephone" name="telefone" id="telefone" class="telefone form-control" placeholder="(99) 99999-9999">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputNasc">Data de Nascimento</label>
+                <input type="" class="form-control" id="inputNasc" data-mask="00/00/0000" placeholder="dd/mm/aaaa">
+              </div>
             </div>
-            <div class="form-group col-md-3">
-              <label for="inputCPF">CPF</label>
-              <input type="number" class="form-control" id="inputCPF">
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputSexo">Sexo</label>
-              <select id="inputSexo" class="form-control">
-                <option selected>Escolha...</option>
-                <option>Masculino</option>
-                <option>Feminino</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputCivil">Estado Civil</label>
-              <select id="inputCivil" class="form-control">
-                <option selected>Escolha...</option>
-                <option>Solteiro(a)</option>
-                <option>Casado(a)</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputNasc">Data de Nascimento</label>
-              <input type="number" class="form-control" id="inputNasc">
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <div class="form-group">
+              <label for="inputAddress">Endereço</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Av. Santo Amaro, 999">
             </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Senha</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Rua Teste Nº999">
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="inputCity">Cidade</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="São Paulo">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputBairro">Bairro</label>
-              <input type="text" class="form-control" id="inputBairro" placeholder="Vila Olimpia">
-            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputCity">Cidade</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="São Paulo">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputBairro">Bairro</label>
+                <input type="text" class="form-control" id="inputBairro" placeholder="Vila Olimpia">
+              </div>
             <div class="form-group col-md-2">
               <label for="inputState">Estado</label>
               <select id="inputState" class="form-control">
@@ -108,14 +104,19 @@
             </div>
             <div class="form-group col-md-2">
               <label for="inputZip">CEP</label>
-              <input type="number" class="form-control" id="inputZip" placeholder="99999999">
+              <input type="number" class="form-control" id="inputZip" placeholder="00000-000">
             </div>
           </div>
           <div class="form-group">
             <label for="inputAddress2">Complemento</label>
             <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, Andar, ou Referência">
           </div>
+        <button type="submit" class="btn btn-primary btn-dark" name="enviar_cadastro">Cadastrar</button>
+        </form>
+      </div>
+    </div>
           
+          <!--
           <br>
           <h4>Contato</h4>
           <div class="form-row">
@@ -136,7 +137,7 @@
                 <input type="number" class="form-control" id="inputConE" placeholder="9999-9999">
               </div>
             </div>
-
+            -->
     <!--
           FAZER UM IF PARA APARECER ISSO SO SE FOR MENOR DE 18 apenas<br>
           <h4>Dados Responsável</h4>
@@ -163,6 +164,7 @@
 
             FIM do IF<br>
     -->
+      <!--
       <br>
       <h4>Informações Adicionais</h4>
 
@@ -217,13 +219,7 @@
          <label for="obs">Observações</label>
          <textarea class="form-control" id="obs" rows="4"></textarea>
        </div>
-      
-
-          <button type="submit" class="btn btn-dark">Enviar</button>
-        </form>
-      </div>
-    </div>
-
+    -->
   <?php
     include("footer.php");
   ?>

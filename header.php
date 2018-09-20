@@ -30,9 +30,7 @@
             <a class="nav-link" href="contato.php">Contato</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Store
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Planos</a>
               <div class="dropdown-divider"></div>
@@ -45,30 +43,26 @@
             <a class="nav-link" href="cadastrar.php">Cadastre-se</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Login
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
             <div class="dropdown-menu">
-              <form class="px-4 py-3">
+              <form class="px-4 py-3" action="acoes.php" method="post">
                 <div class="form-group">
-                  <label for="exampleDropdownFormEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                  <label for="login_email">Email</label>
+                  <input type="email" class="form-control" id="login_email" placeholder="e-mail@exemplo.com" name="login_header">
                 </div>
                 <div class="form-group">
-                  <label for="exampleDropdownFormPassword1">Senha</label>
-                  <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                  <label for="login_senha">Senha</label>
+                  <input type="password" class="form-control" id="login_senha" placeholder="Senha" name="login_header">
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                  <label class="form-check-label" for="dropdownCheck">
-                    Salvar
-                  </label>
+                  <label class="form-check-label" for="dropdownCheck" style="margin:0 0 3% 0;">Salvar dados</label>
                 </div>
-                <button type="submit" class="btn btn-dark">Entrar</button>
-              </form>
+                <button type="submit" class="btn btn-dark btn-block" name="login_header" value="login">Entrar</button>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="cadastrar.php">Novo por aqui? Cadastre-se!</a>
-              <a class="dropdown-item" href="#">Esqueceu sua senha?</a>
+              <button type="submit" class="btn btn-outline-dark btn-block" name="login_header" value="esqueci_senha">Esqueci minha senha</button>
+              <a class="btn btn-outline-secondary btn-block" href="cadastrar.php">Cliente novo? Cadastrar</a>
+              </form>
             </div>
           </li>
         </ul>
