@@ -1,64 +1,80 @@
     <?php
-    include("header.php");
-    ?> 
+    include_once("header.php");
 
-    <div class="container-cad"> 
-      <div class="cadastrodiv">
-        <form  action="index.html" method="post">
-          <br>
-          <h4>Dados</h4>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="inputNome">Nome</label>
-                <input type="text" class="form-control" id="inputNome" placeholder="Nome">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputSobrenome">Sobrenome</label>
-                <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="inputEmail4">E-mail</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Ex. jose@gmail.com">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputEmail5">Confirmar E-mail</label>
-                <input type="password" class="form-control" id="inputEmail5" placeholder="Ex. jose@gmail.com">
-              </div>
-            </div>
+    ?>
 
+    <div class="container-cad offset-lg-3 offset-md-1 offset-sm-1" style="text-align:left;">
+        <form action="index.html" method="post">
+            <div class="container-cad">
+              <br>
+              <h4>Dados</h4>
+                <div class="form-row">
+                  <div class="form-group col-lg-3">
+                    <label for="inputNome">Nome</label>
+                    <input type="text" class="form-control" id="inputNome" name="cadastro_nome" placeholder="Nome">
+                  </div>
+                  <div class="form-group col-lg-3">
+                    <label for="inputSobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" id="inputSobrenome" name="cadastro_sobrenome" placeholder="Sobrenome">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-lg-3">
+                    <label for="inputEmail4">E-mail</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="cadastro_email" placeholder="Ex. jose@gmail.com">
+                  </div>
+                  <div class="form-group col-lg-3">
+                    <label for="inputEmail5">Confirmar E-mail</label>
+                    <input type="password" class="form-control" id="inputEmail5" name="cadastro_conf_email" placeholder="Ex. jose@gmail.com">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-lg-3">
+                    <label for="cadastro_senha">Senha</label>
+                    <input type="email" class="form-control" id="cadastro_senha" name="cadastro_senha" placeholder="Senha">
+                  </div>
+                  <div class="form-group col-lg-3">
+                    <label for="cadastro_conf_senha">Confirme Senha</label>
+                    <input type="password" class="form-control" id="cadastro_conf_senha" placeholder="Senha">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-lg-2">
+                    <label for="inputCPF">CPF</label>
+                    <input type="number" class="form-control" id="inputCPF">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label for="telefone">Celular</label>
+                    <input type="telephone" name="telefone" id="telefone" class="telefone form-control" placeholder="(99) 99999-9999">
+                  </div>
+                  <div class="form-group col-lg-2">
+                    <label for="inputNasc">Data de Nascimento</label>
+                    <input type="" class="form-control" id="inputNasc" data-mask="00/00/0000" placeholder="dd/mm/aaaa">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark btn-primary btn-md">Enviar</button>
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+
+          <!--
             <div class="form-row">
               <div class="form-group col-md-2">
                 <label for="inputRG">RG</label>
                 <input type="number" class="form-control" id="inputRG">
               </div>
-              <div class="form-group col-md-2">
-                <label for="inputCPF">CPF</label>
-                <input type="number" class="form-control" id="inputCPF">
-              </div>
-              <div class="form-group col-md-2">
                 <label for="inputSexo">Sexo</label>
                 <select id="inputSexo" class="form-control">
                   <option selected>Escolha...</option>
                   <option>Masculino</option>
                   <option>Feminino</option>
                 </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="telefone">Celular</label>
-                <input type="telephone" name="telefone" id="telefone" class="telefone form-control" placeholder="(99) 99999-9999">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputNasc">Data de Nascimento</label>
-                <input type="" class="form-control" id="inputNasc" data-mask="00/00/0000" placeholder="dd/mm/aaaa">
-              </div>
-            </div>
-
-            <div class="form-group">
               <label for="inputAddress">Endereço</label>
               <input type="text" class="form-control" id="inputAddress" placeholder="Av. Santo Amaro, 999">
             </div>
+
 
             <div class="form-row">
               <div class="form-group col-md-4">
@@ -115,8 +131,6 @@
         </form>
       </div>
     </div>
-          
-          <!--
           <br>
           <h4>Contato</h4>
           <div class="form-row">
@@ -190,7 +204,7 @@
               <option>5</option>
             </select>
           </div>
-          
+
           <div class="form-group col-md-3">
             <label for="conheceu">Como Conheceu</label>
             <select class="form-control" id="conheceu">

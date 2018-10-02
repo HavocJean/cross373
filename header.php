@@ -1,3 +1,9 @@
+<? 
+include_once("funcoes.php");
+include_once("acoes.php");
+$page = isset($_GET['page'])?$_GET['page']:'home';
+if(!file_exists($page.".php")) $page = 'home';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -38,7 +44,15 @@
             </div>
           </li>
         </ul>
+
         <ul class="navbar-nav mr-right">
+
+<!-- Logout
+          <li class="nav-item">
+            <a class="nav-link" href="acoes.php?acao=logout">Logout</a>
+          </li>
+Fim Logout -->
+
           <li class="nav-item">
             <a class="nav-link" href="cadastrar.php">Cadastre-se</a>
           </li>

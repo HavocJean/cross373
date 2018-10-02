@@ -117,7 +117,12 @@ p {
   color: white;
   background-color: rgba(255, 255,255, 0.3);
   margin: auto;
-  padding: 100px;
+  padding: 30px;
+}
+
+.txtsobre{
+  font-size: 1.051em;
+  color: #FFF;
 }
 
 .imgsobre {
@@ -282,17 +287,10 @@ h2.menu-section-title {
 
 /* CSS cadastro */
 
-.container-cad {
-  text-align: left;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+
+@media(min-width: 1000px;){
+  .imgsobre{
+    background-image:none;
+  }
 }
-
-.cadastrodiv {
-  width: 80%;
-  margin: 0 auto;
-}
-
-
-

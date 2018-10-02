@@ -41,32 +41,33 @@
     </a>
   </div>
   <!-- Fim do carrossel -->
-<div id="sobre" class="fraseefeito bg-dark">
+<div class="fraseefeito bg-dark">
   <hr>
-  <h2>"Treinar é se divertir, se superar e se desafiar!"</h2>
+  <h2 id="sobre">"Treinar é se divertir, se superar e se desafiar!"</h2>
   <hr>
 </div>
     <!-- Sobre nós -->
-<div class="sobrenos container-fluid">
-
+<div class="sobrenos container-fluid" >
   <div class="row">
-
-  <div class="textosobre col-lg-8">
-    <div class="titulosobre">
-      <h2>Sobre a Cross 373</h2>
+    <div class="textosobre col-lg-7">
+        <div class="titulosobre">
+          <h2>Sobre a Cross 373</h2>
+        </div>
+      <hr>
+      <div class="txtsobre">
+        <p>Somos mais que uma academia convencional , somos um centro de treinamento.</p>
+        <p>Temos a melhor estrutura de Treinamento Funcional e Lutas da região.</p>
+        <p>Tudo para garantir o melhor treino para nossos alunos.</p>
+        <p>Com uma equipe de qualidade e profissionais certificados, somos perfeitos para você!</p>
+        <p>Seja qual for seu objetivo, nós vamos alcança-los juntos!</p>
+      </div>
     </div>
-    <hr>
-    <div class="txtsobre">
-      <p>Somos mais que uma academia convencional , somos um centro de treinamento. Temos a melhor estrutura de Treinamento Funcional e Lutas da região. Tudo para garantir o melhor treino para nossos alunos.</p>
-      <p>Com uma equipe de qualidade e profissionais certificados, somos perfeitos para você! Seja qual for seu objetivo, nós vamos alcança-los juntos!</p>
+    <div class="imgsobre col-lg-5">
+      <br>
     </div>
   </div>
-  <div class="imgsobre col-lg-4">
-    <br>
-  </div>
-  </div>
-
 </div>
+
 <div id="horarios" class="parallaxhorarios ">
 
   <div class="textohorarios">
@@ -144,7 +145,7 @@
 
 
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
       <div class="card" style="width:400px">
         <img class="card-img-top rounded" src="img/cross1.jpg" alt="Card image">
         <div class="card-body">
@@ -162,7 +163,7 @@
   </div>
 </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
       <div class="card" style="width:400px">
         <img class="card-img-top rounded" src="img/cross2.jpg" alt="Card image">
         <div class="card-body">
@@ -180,7 +181,7 @@
   </div>
 </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
       <div class="card" style="width:400px">
         <img class="card-img-top rounded" src="img/cross3.jpg" alt="Card image">
         <div class="card-body">
