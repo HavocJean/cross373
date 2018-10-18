@@ -1,8 +1,6 @@
-<? 
+<?php
 include_once("funcoes.php");
 include_once("acoes.php");
-$page = isset($_GET['page'])?$_GET['page']:'home';
-if(!file_exists($page.".php")) $page = 'home';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -47,11 +45,11 @@ if(!file_exists($page.".php")) $page = 'home';
 
         <ul class="navbar-nav mr-right">
 
-<!-- Logout
+ <?php if(is_logged()): ?>
           <li class="nav-item">
-            <a class="nav-link" href="acoes.php?acao=logout">Logout</a>
+            <a class="nav-link" href="acoes.php?acao=logout"><?php echo "Oi ".$_SESSION['usuario']['cadastro_nome'];?>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Logout   </a>
           </li>
-Fim Logout -->
+<?php else: ?>
 
           <li class="nav-item">
             <a class="nav-link" href="cadastrar.php">Cadastre-se</a>
@@ -62,24 +60,27 @@ Fim Logout -->
               <form class="px-4 py-3" action="acoes.php" method="post">
                 <div class="form-group">
                   <label for="login_email">Email</label>
-                  <input type="email" class="form-control" id="login_email" placeholder="e-mail@exemplo.com" name="login_header">
+                  <input type="email" class="form-control" id="login_email" placeholder="e-mail@exemplo.com" name="login_email">
                 </div>
                 <div class="form-group">
                   <label for="login_senha">Senha</label>
-                  <input type="password" class="form-control" id="login_senha" placeholder="Senha" name="login_header">
+                  <input type="password" class="form-control" id="login_senha" placeholder="Senha" name="login_senha">
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="dropdownCheck">
                   <label class="form-check-label" for="dropdownCheck" style="margin:0 0 3% 0;">Salvar dados</label>
                 </div>
-                <button type="submit" class="btn btn-dark btn-block" name="login_header" value="login">Entrar</button>
+                <button type="submit" class="btn btn-dark btn-block" name="acao" value="login">Entrar</button>
               <div class="dropdown-divider"></div>
-              <button type="submit" class="btn btn-outline-dark btn-block" name="login_header" value="esqueci_senha">Esqueci minha senha</button>
+              <button type="submit" class="btn btn-outline-dark btn-block" name="login_submit" value="esqueci_senha">Esqueci minha senha</button>
               <a class="btn btn-outline-secondary btn-block" href="cadastrar.php">Cliente novo? Cadastrar</a>
               </form>
+              <div class="mensagem"><?php echo isset($_GET['msg'])?$_GET['msg']:''; ?></div>
             </div>
           </li>
+          <?php endif; ?>
         </ul>
       </div>
     </nav>
+
     <div style="margin-top:60px;"></div>

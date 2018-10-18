@@ -4,7 +4,7 @@
     ?>
 
     <div class="container-cad offset-lg-3 offset-md-1 offset-sm-1" style="text-align:left;">
-        <form action="index.html" method="post">
+        <form action="acoes.php" method="post">
             <div class="container-cad">
               <br>
               <h4>Dados</h4>
@@ -25,34 +25,41 @@
                   </div>
                   <div class="form-group col-lg-3">
                     <label for="inputEmail5">Confirmar E-mail</label>
-                    <input type="password" class="form-control" id="inputEmail5" name="cadastro_conf_email" placeholder="Ex. jose@gmail.com">
+                    <input type="email" class="form-control" id="inputEmail5" name="cadastro_conf_email" placeholder="Ex. jose@gmail.com">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-lg-3">
                     <label for="cadastro_senha">Senha</label>
-                    <input type="email" class="form-control" id="cadastro_senha" name="cadastro_senha" placeholder="Senha">
+                    <input type="password" class="form-control" id="cadastro_senha" name="cadastro_senha" placeholder="Senha">
                   </div>
                   <div class="form-group col-lg-3">
                     <label for="cadastro_conf_senha">Confirme Senha</label>
-                    <input type="password" class="form-control" id="cadastro_conf_senha" placeholder="Senha">
+                    <input type="password" class="form-control" id="cadastro_conf_senha"
+                    name="cadastro_conf_senha"
+                    placeholder="Senha">
                   </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-lg-2">
-                    <label for="inputCPF">CPF</label>
-                    <input type="number" class="form-control" id="inputCPF">
-                  </div>
-                  <div class="form-group col-lg-2">
-                    <label for="telefone">Celular</label>
-                    <input type="telephone" name="telefone" id="telefone" class="telefone form-control" placeholder="(99) 99999-9999">
-                  </div>
-                  <div class="form-group col-lg-2">
+                    <div class="form-group col-lg-4">
                     <label for="inputNasc">Data de Nascimento</label>
                     <input type="" class="form-control" id="inputNasc" data-mask="00/00/0000" placeholder="dd/mm/aaaa">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-dark btn-primary btn-md">Enviar</button>
+                <div class="form-row">
+                  <div class="form-group col-lg-3">
+                    <label for="inputCPF">CPF</label>
+                    <input type="number" class="form-control" id="inputCPF">
+                  </div>
+                  <div class="form-group col-lg-3">
+                    <label for="telefone">Celular</label>
+                    <input type="telephone" name="telefone" id="telefone" class="telefone form-control" placeholder="(99) 99999-9999">
+                  </div>
+                  </div>
+
+                <div class="mensagem" style="color: red"><?php echo isset($_GET['msg'])?$_GET['msg']:''; ?></div>
+                <br>
+                <button type="submit" class="btn btn-dark btn-primary btn-md" name="acao" value="cadastro">Enviar</button>
                 <br>
                 <br>
             </div>
