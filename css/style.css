@@ -285,12 +285,16 @@ h2.menu-section-title {
 }
 
 
-/* CSS cadastro */
+/* Pagina produto individual */
 
+.mainphoto>img {
+  width: 400px;
+  height: 100%;
+}
 
-
-@media(min-width: 1000px;){
-  .imgsobre{
-    background-image:none;
-  }
+.photo_item>img {
+  margin-top: 5px;
+  margin-right: 5px;
+  width: 80px;
+  height: 100%;
 }

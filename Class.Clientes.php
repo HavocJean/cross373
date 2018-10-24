@@ -10,7 +10,8 @@ class Clientes {
         } catch(PDOException $e) {
             echo $e->getMessage();
         }
-    }
+	}
+	
 
     public function inserirCliente(){
         $query = $db->prepare('INSERT INTO clientes(nomeClientes, sobrenomeClientes, cpf_cnpjClientes, dataNascClientes, telefoneClientes, emailClientes, senha)
@@ -30,6 +31,7 @@ class Clientes {
 		]);
     }
 
+
     public function inserirEnderecos(){
         $query = $db->prepare('INSERT INTO enderecos(ruaEnderecos, numeroEnderecos, complementoEnderecos, bairroEnderecos, cidadeEnderecos, estadoEnderecos, cepEnderecos)
 			VALUES(:ruaEnderecos, :numeroEnderecos, :complementoEnderecos, :bairroEnderecos, :cidadeEnderecos, :estadoEnderecos, :cepEnderecos)');
@@ -45,6 +47,18 @@ class Clientes {
 			':estadoEnderecos'=>$_POST['estado'],
 			':cepEnderecos'=>$_POST['cep']
 		]);
-    }
+	}
+
+
+	public function atualizarCliente(){
+		$id = isset($_REQUEST['id'])?$_REQUEST['id']:false;
+		
+		$query = $db->prepare('UPDATE clientes SET rgClientes = :rgClientes, sexoClientes = :sexoClientes WHERE idClientes = :id');
+
+		$query->execute([':rgClientes'=>$_POST['rg'],
+						':sexoClientes'=>$_POST['sexo'],
+						':idClientes'=> $id	
+			]);
+	}
 
 }
