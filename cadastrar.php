@@ -1,10 +1,15 @@
-    <?php
+<?php
     include_once("header.php");
+    include_once("ClassClientes.php");
 
-    ?>
+    if($_POST){
+      $cliente = new Clientes();
+      $cliente->inserirCliente();
+    }
+?>
 
     <div class="container-cad offset-lg-3 offset-md-1 offset-sm-1" style="text-align:left;">
-        <form action="acoes.php" method="post">
+        <form action="" method="POST">
             <div class="container-cad">
               <br>
               <h4>Dados</h4>
@@ -59,7 +64,7 @@
 
                 <div class="mensagem" style="color: red"><?php echo isset($_GET['msg'])?$_GET['msg']:''; ?></div>
                 <br>
-                <button type="submit" class="btn btn-dark btn-primary btn-md" name="acao" value="cadastro">Enviar</button>
+                <button type="submit" class="btn btn-dark btn-primary btn-md" name="cadastrar" value="cadastrar">Cadastrar</button>
                 <br>
                 <br>
             </div>

@@ -1,9 +1,17 @@
 <?php
     include_once("header.php");
+    include_once("ClassClientes.php");
+
+    if($_POST){
+      $cliente = new Clientes();
+      $cliente->inserirEnderecos();
+      $cliente->atualizarCliente();
+    }
 ?>
+
   <div class="container">
     <div class="container-fluid">
-        <form method="" action="" style="margin-top:100px;text-align:left;">
+        <form method="POST" action="" style="margin-top:100px;text-align:left;">
 
         <h3>Complete seu cadastro</h3>
             <div class="form-row">
@@ -14,7 +22,7 @@
               <div class="form-group col-md-2">
                 <label for="inputSexo">Sexo</label>
                 <select id="inputSexo" class="form-control" name="sexo">
-                  <option selected>Escolha...</option>
+                  <option value="" selected disabled>Escolha...</option>
                   <option>Masculino</option>
                   <option>Feminino</option>
                 </select>
@@ -45,7 +53,7 @@
               <div class="form-group col-md-2">
                 <label for="inputState">Estado</label>
                 <select id="inputState" class="form-control" name="estado">
-                    <option value="selecione" selected disabled>Selecione...</option>
+                    <option value="" selected disabled>Selecione...</option>
                     <option value="acre">AC</option>
                     <option value="alagoas">AL</option>
                     <option value="amazonas">AM</option>
@@ -86,7 +94,7 @@
             </div>
             <div class="form-row">
             </div>
-            <input type="submit" class="btn btn-primary btn-dark" name="cadastrar" value="Cadastrar" style="margin-bottom:20px;" >
+            <button type="submit" class="btn btn-dark btn-primary btn-md" name="cadastrar" value="cadastrar" style="margin-bottom:20px;">Cadastrar</button>            
         </form>
       </div>
     </div>
