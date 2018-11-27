@@ -58,7 +58,7 @@ a {
 /* menu */
 
 nav {
-  height: 60px;
+  height: 12vh;
 }
 
 /* .navbar {
@@ -71,7 +71,10 @@ nav {
 
 .navbar-nav {
   margin: auto;
+
 }
+
+
 
 /* Horarios e galeria */
 
@@ -103,6 +106,7 @@ h2 {
   font-size: 34px;
   color: #fff;
   text-transform: uppercase;
+
 }
 
 .textogaleria {
@@ -345,10 +349,13 @@ h2.menu-section-title {
 }
 
 #titulobanner {
-  margin-top: 180px;
+
   font-weight: bold;
   font-size: 4em;
+  text-align: center;
+  padding: 20vh;
 }
+
 
 
 /* Pagina produto individual */
