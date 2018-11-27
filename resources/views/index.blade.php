@@ -151,8 +151,8 @@
 
 
   <div class="row">
-    <div class="col-lg-4 col-md-6">
-      <div class="card" style="width:400px">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
         <img class="card-img-top rounded" src="img/cross1.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">Crosstraining na Cross 373</h4>
@@ -160,7 +160,7 @@
 
         </div>
       </div>
-      <div class="card" style="width:400px">
+      <div class="card">
   <img class="card-img-top rounded" src="img/galeria1.jpg" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Crosstraining na Cross 373</h4>
@@ -169,8 +169,8 @@
   </div>
 </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card" style="width:400px">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
         <img class="card-img-top rounded" src="img/cross2.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">Crosstraining na Cross 373</h4>
@@ -178,7 +178,7 @@
 
         </div>
       </div>
-      <div class="card" style="width:400px">
+      <div class="card">
   <img class="card-img-top rounded" src="img/galeria1.jpg" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Crosstraining na Cross 373</h4>
@@ -187,8 +187,8 @@
   </div>
 </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card" style="width:400px">
+    <div class="col-lg-4 col-md-6 col-sm-12" id="esconder">
+      <div class="card" >
         <img class="card-img-top rounded" src="img/cross3.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">Crosstraining na Cross 373</h4>
@@ -196,7 +196,7 @@
 
         </div>
       </div>
-      <div class="card" style="width:400px">
+      <div class="card">
   <img class="card-img-top rounded" src="img/galeria3.jpg" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">Crosstraining na Cross 373</h4>
