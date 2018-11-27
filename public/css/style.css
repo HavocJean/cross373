@@ -364,3 +364,23 @@ h2.menu-section-title {
   width: 80px;
   height: 100%;
 }
+
+
+
+
+@media (max-width: 990px) {
+  .imgsobre {
+    display: none;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 810px) {
+
+  h2 {
+    font-size: 25px;
+  }
+}
