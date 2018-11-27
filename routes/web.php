@@ -22,3 +22,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/store', function () {
     return view('store');
 });
+
+Route::get('/produto', function () {
+    return view('produto');
+});
+
+Route::get('/contato', function () {
+    return view('contato');
+});
+
+Route::get('/update', function () {
+    return view('register2');
+});
