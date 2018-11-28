@@ -34,3 +34,6 @@ Route::get('/contato', function () {
 Route::get('/update', function () {
     return view('register2');
 });
+
+Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
