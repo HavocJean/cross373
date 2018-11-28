@@ -15,7 +15,7 @@
 <div class="galeria container-fluid">
   <div class="row" style="margin: 0 auto;">
 
-    <div class="col-lg-2" style="padding:0;margin-left:3%;">
+    <div class="col-lg-2 col-md-2" style="padding:0;margin-left:3%;">
         <div class="menustore rounded" >
           <form class="form-inline my-2 my-lg-0">
              <input class="form-control mr-sm-2" type="search" placeholder="Buscar.." style="width:80%;margin-left:10%;margin-top:10px;margin-bottom:10px;">
@@ -41,7 +41,7 @@
           </ul>
       </div>
     </div>
-    <div class="col-lg-3" style="padding:0;margin-left:3%;">
+    <div id="itemstore" class="col-lg-3 col-md-3" style="padding:0;margin-left:3%;">
       <div class="card">
         <img class="card-img-top rounded img-thumbnail" src="img/cross1.jpg" alt="Card image">
         <div class="card-body">
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <div class="col-lg-3" style="padding:0">
+    <div class="col-lg-3 col-md-3" style="padding:0">
       <div class="card">
         <img class="card-img-top rounded img-thumbnail" src="img/cross2.jpg" alt="Card image">
         <div class="card-body">
@@ -77,7 +77,7 @@
     </div>
   </div>
 
-    <div class="col-lg-3" style="padding:0">
+    <div class="col-lg-3 col-md-3" style="padding:0">
       <div class="card">
         <img class="card-img-top rounded img-thumbnail" src="img/cross3.jpg" alt="Card image">
         <div class="card-body">

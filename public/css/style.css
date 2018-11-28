@@ -357,6 +357,11 @@ h2.menu-section-title {
   padding: 20vh;
 }
 
+.mapa {
+  padding-top:15px;
+  padding-left:100px;
+}
+
 
 
 /* Pagina produto individual */
@@ -416,6 +421,14 @@ h2.menu-section-title {
   .newsletter {
     padding-bottom: 10px;
   }
+  
+  .mapa {
+    padding-left: 25px;
+  }
+
+  #itemstore {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -437,11 +450,26 @@ h2.menu-section-title {
   h2 {
     font-size: 18px;
   }
+
+  #titulobanner {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 500px) {
 
   h2 {
     font-size: 16px;
+  }
+
+  #titulobanner {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+
+  #titulobanner {
+    font-size: 33px;
   }
 }

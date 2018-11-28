@@ -110,13 +110,13 @@
       <div class="textonews row col-lg-5">
           <p>Inscreva-se na nossa newsletter!</p>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 col-md-12">
           <form action="" method="POST">
              <div class="form-row">
-              <div class="form-group col-md-3">
+              <div class="form-group col-lg-3 col-md-5">
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-lg-3 col-md-5">
                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
               </div>
               <button type="submit" class="btn btn-dark" style="height:38px;">Cadastrar-se</button>
