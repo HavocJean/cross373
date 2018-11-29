@@ -378,6 +378,32 @@ h2.menu-section-title {
   height: 100%;
 }
 
+#todoproduto {
+  background-color: #f9f9f9;
+}
+
+.carrinho {
+  padding-top:30px;
+  background-color: #f9f9f9;
+}
+
+.caixacarrinho {
+  margin-top: 25px;
+  width: 100%;
+  height: 260px;
+  background-color: #efefef;
+  border-radius: 10px;
+}
+
+.caixacarrinho>h4 {
+  padding-top:15px;
+  margin-left:20px;
+}
+
+.botaocarrinho {
+  padding-top: 25px;
+}
+
 
 @media (min-width: 386px) and (max-width: 1250px)  {
 

@@ -27,6 +27,10 @@ Route::get('/produto', function () {
     return view('produto');
 });
 
+Route::get('/carrinho', function () {
+    return view('carrinho');
+});
+
 Route::get('/contato', function () {
     return view('contato');
 });

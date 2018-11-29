@@ -30,7 +30,7 @@
       <!-- Menu com logo e login / register -->
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-              <img src="../public/img/logo-cross373-fav.jpeg" alt="" class="navbar-brand" width="100"/>
+                <img src="../public/img/logo-cross373-fav.jpeg" alt="" class="navbar-brand" width="100"/>
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     Cross 373
                 </a> -->
