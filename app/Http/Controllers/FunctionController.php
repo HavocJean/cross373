@@ -16,6 +16,11 @@ public function mostrarProdutos(){
   return view('adminProdutos', array('produtos' => $produtos));
 }
 
+public function storeProdutos(){
+  $produtos = Produto::All();
+  return view('store', array('produtos' => $produtos));
+}
+
 
 public function cadastrarProduto(Request $r) {
   if ($r->isMethod('get')) {
@@ -27,7 +32,7 @@ public function cadastrarProduto(Request $r) {
   $novo_produto->descricaoProdutos = $r->input('descricaoProdutos');
   $novo_produto->categoriaProdutos = $r->input('categoriaProdutos');
   $novo_produto->valorProdutos = $r->input('valorProdutos');
-  $novo_produto->imagemProdutos = $r->input('imagemProdutos');
+  $novo_produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
   $novo_produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
 
   if ($novo_produto->save()) {
@@ -51,7 +56,7 @@ public function atualizarProduto($id,Request $r) {
   $produto->descricaoProdutos = $r->input('descricaoProdutos');
   $produto->categoriaProdutos = $r->input('categoriaProdutos');
   $produto->valorProdutos = $r->input('valorProdutos');
-  $produto->imagemProdutos = $r->input('imagemProdutos');
+  $produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
   $produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
 
   if ($produto->save()) {
@@ -62,5 +67,7 @@ public function atualizarProduto($id,Request $r) {
     array('msg' => 'Erro na atualização do produto', 'produto' => $produto));
   }
 }
+
+
 
 }

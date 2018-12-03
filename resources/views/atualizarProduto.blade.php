@@ -22,15 +22,15 @@
 					<div class="form-row">
 					<div class="form-group col-md-3">
 							<label for="categoriaProdutos">Categoria do Produto</label>
-							<input type="text" class="form-control" id="categoriaProdutos" name="categoriaProdutos">
+							<input type="text" class="form-control" id="categoriaProdutos" name="categoriaProdutos" value="{{ $produto -> categoriaProdutos }}">
 						</div>
 						<div class="form-group col-md-3">
 							<label for="valorProdutos">Valor do Produto</label>
-							<input type="number" class="form-control" id="valorProdutos" name="valorProdutos">
+							<input type="number" class="form-control" id="valorProdutos" name="valorProdutos" value="{{ $produto -> valorProdutos }}">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="imagemProdutos">Imagem do Produto</label>
-							<input type="text" class="form-control" id="imagemProdutos" name="imagemProdutos">
+							<label for="caminhoImagemProdutos">Imagem do Produto</label>
+							<input type="text" class="form-control" id="caminhoImagemProdutos" name="caminhoImagemProdutos" value="{{ $produto -> camminhoImagemProdutos }}">
 						</div>
 					</div>
 

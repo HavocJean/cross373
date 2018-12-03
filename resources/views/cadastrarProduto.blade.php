@@ -29,8 +29,8 @@
 							<input type="number" class="form-control" id="valorProdutos" name="valorProdutos">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="imagemProdutos">Imagem do Produto</label>
-							<input type="text" class="form-control" id="imagemProdutos" name="imagemProdutos">
+							<label for="caminhoImagemProdutos">Imagem do Produto</label>
+							<input type="text" class="form-control" id="caminhoImagemProdutos" name="caminhoImagemProdutos">
 						</div>
 					</div>
 
