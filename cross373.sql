@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Nov-2018 às 13:20
--- Versão do servidor: 10.1.35-MariaDB
--- versão do PHP: 7.2.9
+-- Generation Time: 03-Dez-2018 às 04:14
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -95,6 +95,26 @@ CREATE TABLE `inventario` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `pagamentos`
 --
 
@@ -110,6 +130,18 @@ CREATE TABLE `pagamentos` (
   `dataPagamentos` datetime NOT NULL,
   `dataUltAtualPagamentos` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -154,8 +186,21 @@ CREATE TABLE `produtos` (
   `descricaoProdutos` varchar(200) COLLATE utf8_bin DEFAULT NULL,
   `categoriaProdutos` varchar(100) COLLATE utf8_bin NOT NULL,
   `valorProdutos` int(11) NOT NULL,
-  `dataUltimaAtualProdutos` datetime DEFAULT NULL
+  `dataUltimaAtualProdutos` datetime DEFAULT NULL,
+  `caminhoImagemProdutos` varchar(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`idProdutos`, `nomeProdutos`, `descricaoProdutos`, `categoriaProdutos`, `valorProdutos`, `dataUltimaAtualProdutos`, `caminhoImagemProdutos`) VALUES
+(1, 'Produto teste', 'teste para atualização de produto 2', 'Teste', 150, '2018-12-03 02:56:55', 'img/cross1.jpg'),
+(2, 'Produto teste 2', 'teste para atualização de produto 3', 'Teste', 100, '2018-12-03 03:09:06', 'img/cross3.jpg'),
+(3, 'Produto teste 3', 'teste para atualização de produto 3', 'Teste', 150, '2018-12-03 03:10:02', 'img/cross2.jpg'),
+(4, 'Produto teste 4', 'teste para produto em nova linha', 'teste', 111, '2018-12-03 03:10:45', 'img/cross1.jpg'),
+(5, 'Produto teste 4', 'teste para produto em nova linha', 'teste', 111, '2018-12-03 03:11:02', 'img/cross1.jpg'),
+(6, 'Produto teste 4', 'teste para produto em nova linha', 'teste', 111, '2018-12-03 03:11:04', 'img/cross1.jpg');
 
 -- --------------------------------------------------------
 
@@ -185,6 +230,34 @@ CREATE TABLE `status_pedidos` (
   `idPagamentos` int(11) DEFAULT NULL,
   `dataUltAtualStatusPedidos` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `birthday` date NOT NULL,
+  `cpf` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phoneNumber` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `email_verified_at`, `password`, `birthday`, `cpf`, `phoneNumber`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Teste', 'Teste', 'teste@teste.com', NULL, '$2y$10$PAHTtIgQUBpa.JcYvPHJXeief6mTLsTljMBQAcYfZAoh4aO8E0OTG', '1986-01-21', '356155858584', '11997965633', NULL, '2018-12-03 01:55:42', '2018-12-03 01:55:42');
 
 --
 -- Indexes for dumped tables
@@ -219,6 +292,12 @@ ALTER TABLE `inventario`
   ADD KEY `idx_produtos_inventario` (`idProduto`);
 
 --
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pagamentos`
 --
 ALTER TABLE `pagamentos`
@@ -226,6 +305,12 @@ ALTER TABLE `pagamentos`
   ADD KEY `idx_clientes_pagamentos` (`idClientes`),
   ADD KEY `idx_pedidos_pagamentos` (`idPedidos`),
   ADD KEY `idx_contratacoes_pagamentos` (`idContratacoes`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
 
 --
 -- Indexes for table `pedidos`
@@ -263,6 +348,13 @@ ALTER TABLE `status_pedidos`
   ADD KEY `idx_statusped_pagamentos` (`idPagamentos`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -291,6 +383,12 @@ ALTER TABLE `inventario`
   MODIFY `idInventario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `pagamentos`
 --
 ALTER TABLE `pagamentos`
@@ -312,7 +410,7 @@ ALTER TABLE `planos`
 -- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `idProdutos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProdutos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `produtos_pedidos`
@@ -325,6 +423,12 @@ ALTER TABLE `produtos_pedidos`
 --
 ALTER TABLE `status_pedidos`
   MODIFY `idStatusPedidos` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
