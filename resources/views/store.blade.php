@@ -6,18 +6,16 @@
 <!-- Banner -->
       <div class="bannerstore">
         <div class="bannerbg">
-
             <h2 id="titulobanner"><hr>Escolha seu Plano agora!<hr></h2>
-
       </div>
     </div>
   <!-- Fim do Banner -->
 <div class="galeria container-fluid">
   <div class="row">
-        <div class="menustore rounded col-lg-2" >
+        <div class="menustore rounded col-lg-2 col-md-2" >
                     <form class="form-inline my-2 my-lg-0">
                       <input class="form-control mr-sm-2" type="search" placeholder="Buscar.." style="width:80%;margin-left:10%;margin-top:10px;margin-bottom:10px;">
-                      <button class="btn btn-outline-light my-2 my-sm-0" style="width:50%; margin: auto;" type="submit">Buscar</button>
+                      <button class="btn btn-outline-light my-2 my-sm-0 botaoresponse" style="width:50%; margin: auto;" type="submit">Buscar</button>
                     </form>
                     <div class="titulomenu">
                       <br>
@@ -39,16 +37,18 @@
                     </ul>
                 </div>
     
-        <div class="container-produtos col-lg-10">
+        <div class="container-produtos col-lg-10 col-md-10 col-sm-12">
                 <div class="row" style="margin: 0 auto;">
                   @isset($produtos)
                     @forelse($produtos as $produto)
+                    <div class="col-lg-4 col-md-6">
                       <div class="card">
                         <img class="card-img-top rounded img-thumbnail" src="{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
                             <div class="card-body">
                               <h4 class="card-title">{{ $produto -> nomeProdutos }}</h4>
                               <p class="card-text">{{ $produto -> descricaoProdutos }}</p>
                             </div>
+                    </div>
                         </div>
                   @empty
                   <p>não há registro de produtos</p>
