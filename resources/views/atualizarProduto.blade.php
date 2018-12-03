@@ -30,7 +30,7 @@
 						</div>
 						<div class="form-group col-md-6">
 							<label for="caminhoImagemProdutos">Imagem do Produto</label>
-							<input type="text" class="form-control" id="caminhoImagemProdutos" name="caminhoImagemProdutos" value="{{ $produto -> camminhoImagemProdutos }}">
+							<input type="text" class="form-control" id="caminhoImagemProdutos" name="caminhoImagemProdutos" value="{{ $produto -> caminhoImagemProdutos }}">
 						</div>
 					</div>
 
