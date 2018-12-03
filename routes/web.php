@@ -41,3 +41,8 @@ Route::get('/update', function () {
 
 Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
 Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+
+Route::get('/admin-produtos', 'FunctionController@mostrarProdutos');
+
+Route::get('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+Route::post('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');

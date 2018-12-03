@@ -5,22 +5,22 @@
 
 <div class="container">
 	<div class="container-fluid">
-			<form method="post" action="/cross373/public/cadastrarproduto" style="margin-top:100px;text-align:left;">
+			<form method="post" action="/cross373/public/atualizarproduto/{{ $produto -> idProdutos }}" style="margin-top:100px;text-align:left;">
 			{!! csrf_field() !!}
-			<h3>Complete seu cadastro</h3>
+			<h3>Atualize o Produto</h3>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="nomeProdutos">Nome Produto</label>
-							<input type="text" class="form-control" id="nomeProdutos" name="nomeProdutos">
+							<input type="text" class="form-control" id="nomeProdutos" name="nomeProdutos" value="{{ $produto -> nomeProdutos }}">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="descricaoProdutos">Descrição do Produto</label>
-							<input type="text" class="form-control" id="descricaoProdutos" name="descricaoProdutos">
+							<input type="text" class="form-control" id="descricaoProdutos" name="descricaoProdutos" value="{{ $produto -> descricaoProdutos }}">
 						</div>
 					</div>
 
 					<div class="form-row">
-						<div class="form-group col-md-3">
+					<div class="form-group col-md-3">
 							<label for="categoriaProdutos">Categoria do Produto</label>
 							<input type="text" class="form-control" id="categoriaProdutos" name="categoriaProdutos">
 						</div>
@@ -40,7 +40,7 @@
 			</form>
 
 			@isset($msg)
-            <h2>{{ $msg }}</h2>
+            <h2 class="mensagem-admin">{{ $msg }}</h2>
             @endisset
 
 		</div>
