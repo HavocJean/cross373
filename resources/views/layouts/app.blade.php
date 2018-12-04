@@ -157,7 +157,7 @@
 
 <!-- Footer -->
 
-    <div>
+    <div class="teste">
       <div class="container conecte_footer">
          Conecte-se em nossas redes sociais!
       </div>
@@ -168,7 +168,7 @@
       </div>
     </div>
 
-    <div class="container text-center text-md-left mt-5">
+    <div class="fundofooter container text-center text-md-left mt-5">
       <div class="row mt-3">
 
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
