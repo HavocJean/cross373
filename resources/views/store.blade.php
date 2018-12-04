@@ -43,7 +43,7 @@
                     @forelse($produtos as $produto)
                     <div class="col-lg-4 col-md-6">
                       <div class="card">
-                        <img class="card-img-top rounded img-thumbnail" src="{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
+                        <img class="card-img-top rounded img-thumbnail" src="storage/{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
                             <div class="card-body">
                               <h4 class="card-title">{{ $produto -> nomeProdutos }}</h4>
                               <p class="card-text">{{ $produto -> descricaoProdutos }}</p>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use \App\Produto as Produto;
@@ -26,22 +27,39 @@ public function cadastrarProduto(Request $r) {
   if ($r->isMethod('get')) {
     return view('cadastrarProduto');
   }
-  $novo_produto = new Produto;
+  $nameFile = null;
+  if ($r->image) {    
+    $novo_produto = new Produto;
 
-  $novo_produto->nomeProdutos = $r->input('nomeProdutos');
-  $novo_produto->descricaoProdutos = $r->input('descricaoProdutos');
-  $novo_produto->categoriaProdutos = $r->input('categoriaProdutos');
-  $novo_produto->valorProdutos = $r->input('valorProdutos');
-  $novo_produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
-  $novo_produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
+    // Define um aleatório para o arquivo baseado no timestamps atual
+    $name = uniqid(date('HisYmd'));
+    // Recupera a extensão do arquivo
+    $extension = $r->image->extension();
+    // Define finalmente o nome
+    $nameFile = "{$name}.{$extension}";
 
-  if ($novo_produto->save()) {
-    return view('cadastrarProduto',
-    array('msg' => 'Produto gravado com sucesso'));
-  } else {
-    return view('cadastrarProduto',
-    array('msg' => 'Erro na gravação do produto'));
-  }
+    // Faz o upload
+    //$upload = $r->image->storeAs('img', $nameFile);
+    /*$r->file('image')->move(
+      base_path().'/public/img/'
+    );*/
+    $novo_produto->nomeProdutos = $r->input('nomeProdutos');
+    $novo_produto->descricaoProdutos = $r->input('descricaoProdutos');
+    $novo_produto->categoriaProdutos = $r->input('categoriaProdutos');
+    $novo_produto->valorProdutos = $r->input('valorProdutos');
+    //$novo_produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
+    //$imagem = $r->image->store('categories', $nameFile);
+    $novo_produto->caminhoImagemProdutos = $r->image->storeAs('img', $nameFile);
+    $novo_produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
+
+    if ($novo_produto->save()) {
+      return view('cadastrarProduto',
+      array('msg' => 'Produto gravado com sucesso'));
+    } else {
+      return view('cadastrarProduto',
+      array('msg' => 'Erro na gravação do produto'));
+    }
+  }  
 }
 
 
