@@ -21,7 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" id="teste">
 
 </head>
   <body>
@@ -170,7 +170,7 @@
                   </ul>
                   <div class="card-body">
                     <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="#" class="card-link"><button onclick="trocar()">Trocar Tema</button></a>
                   </div>
                 </div>
 <!-- Fim dos Cards de opções administrativas -->
@@ -179,4 +179,10 @@
 
 
   </body>
+<script type="text/javascript">
+  function trocar() {
+    var teste = document.getElementById('teste').href="{{ asset('css/stylealternative.css') }}";
+    //teste[3].href = '{{ asset('css/stylealternative.css') }}';
+  }
+</script>
 </html>
