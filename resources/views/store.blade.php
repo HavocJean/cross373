@@ -36,14 +36,14 @@
                       <li><hr></li>
                     </ul>
                 </div>
-    
+
         <div class="container-produtos col-lg-10 col-md-10 col-sm-12">
                 <div class="row" style="margin: 0 auto;">
                   @isset($produtos)
                     @forelse($produtos as $produto)
                     <div class="col-lg-4 col-md-6">
                       <div class="card">
-                        <img class="card-img-top rounded img-thumbnail" src="storage/{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
+                        <img class="card-img-top rounded img-thumbnail" src="../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
                             <div class="card-body">
                               <h4 class="card-title">{{ $produto -> nomeProdutos }}</h4>
                               <p class="card-text">{{ $produto -> descricaoProdutos }}</p>
@@ -54,12 +54,12 @@
                   <p>não há registro de produtos</p>
                   @endforelse
                   @endisset
-                        
+
                   </div>
           </div>
   </div>
         <!-- Menu lateral -->
 
-  
+
   </div>
     @endsection

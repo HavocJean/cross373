@@ -28,7 +28,7 @@ public function cadastrarProduto(Request $r) {
     return view('cadastrarProduto');
   }
   $nameFile = null;
-  if ($r->image) {    
+  if ($r->image) {
     $novo_produto = new Produto;
 
     // Define um aleatório para o arquivo baseado no timestamps atual
@@ -59,7 +59,7 @@ public function cadastrarProduto(Request $r) {
       return view('cadastrarProduto',
       array('msg' => 'Erro na gravação do produto'));
     }
-  }  
+  }
 }
 
 
@@ -68,13 +68,24 @@ public function atualizarProduto($id,Request $r) {
     $produto = Produto::find($id);
     return view('atualizarProduto', array('produto' => $produto));
   }
+
+  $nameFile = null;
+
+  if ($r->image) {
+
   $produto = Produto::find($id);
+  // Define um aleatório para o arquivo baseado no timestamps atual
+  $name = uniqid(date('HisYmd'));
+  // Recupera a extensão do arquivo
+  $extension = $r->image->extension();
+  // Define finalmente o nome
+  $nameFile = "{$name}.{$extension}";
 
   $produto->nomeProdutos = $r->input('nomeProdutos');
   $produto->descricaoProdutos = $r->input('descricaoProdutos');
   $produto->categoriaProdutos = $r->input('categoriaProdutos');
   $produto->valorProdutos = $r->input('valorProdutos');
-  $produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
+  $produto->caminhoImagemProdutos = $r->image->storeAs('img', $nameFile);
   $produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
 
   if ($produto->save()) {
@@ -85,7 +96,7 @@ public function atualizarProduto($id,Request $r) {
     array('msg' => 'Erro na atualização do produto', 'produto' => $produto));
   }
 }
-
+}
 
 
 }

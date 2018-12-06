@@ -5,7 +5,7 @@
 
 <div class="container">
 	<div class="container-fluid">
-			<form method="post" action="/cross373/public/cadastrarproduto" style="margin-top:100px;text-align:left;" enctype="multipart/form-data">
+			<form method="post" action="/cross373/public/admin/cadastrarproduto" style="margin-top:100px;text-align:left;" enctype="multipart/form-data">
 			{!! csrf_field() !!}
 			<h3>Complete seu cadastro</h3>
 					<div class="form-row">
