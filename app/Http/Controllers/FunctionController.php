@@ -98,5 +98,15 @@ public function atualizarProduto($id,Request $r) {
 }
 }
 
+public function deletarProduto($id) {
+  $produto = Produto::find($id);
+  if(empty($produto)) {
+    return view('adminProdutos', array('msg' => 'Registro não encontrado'));
+  } else {
+    $produto->delete();
+    return view('adminProdutos', array('msg'=> 'Registro deletado com sucesso'));
+  }
+}
+
 
 }
