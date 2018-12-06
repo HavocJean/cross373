@@ -37,10 +37,14 @@ Route::get('/update', function () {
     return view('register2');
 });
 
-Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
-Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+Route::get('/admin', function () {
+    return view('admin');
+});
 
-Route::get('/admin-produtos', 'FunctionController@mostrarProdutos');
+Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto');
+Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto');
 
-Route::get('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
-Route::post('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+Route::get('/admin/admin-produtos', 'FunctionController@mostrarProdutos');
+
+Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
