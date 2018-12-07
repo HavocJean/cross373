@@ -27,6 +27,12 @@ Route::get('/addtocart', 'FunctionController@adicionarcarrinhosessao')->name('ad
 Route::post('/addtocart', 'FunctionController@adicionarcarrinhosessao')->name('adicionarcarrinho');
 
 Route::get('/carrinho', 'FunctionController@pegarcarrinho');
+Route::post('/carrinho', 'FunctionController@pegarcarrinho');
+
+Route::get('/deletarprodutocarrinho/{id}', 'FunctionController@deletarprodutocarrinho')->name('deletarprodutocarrinho');
+Route::post('/deletarprodutocarrinho/{id}', 'FunctionController@deletarprodutocarrinho')->name('deletarprodutocarrinho');
+
+Route::get('/deletasessao', 'FunctionController@deletaSessao');
 
 Route::get('/contato', function () {
     return view('contato');
@@ -40,7 +46,6 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/deleta', 'FunctionController@deleta');
 
 Route::prefix('/admin')->name('admin')->group(function () {
   Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');

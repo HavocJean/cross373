@@ -11,22 +11,24 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">produto</th>
-                            <th scope="col">qtd</th>
-                            <th scope="col">preço</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Remover</th>
                         </tr>
                     </thead>
                     <tbody>
+                      @isset($cart)
                       @foreach($cart as $k => $v)
-
                         <tr>
                             <td><img src="../public/img/cross1.jpg" style="width:80px;"><span style="padding-left:10px;">  {{ $v['nomeProdutos']}}</span></td>
                             <td>  {{ $v['quantidadeProdutos']}}</td>
                             <td>  {{ $v['valorProdutos']}}</td>
-                            
-
+                            <td> <a href="/cross373/public/deletarprodutocarrinho/{{ $v['idProdutos'] }}">X</a> </td>
                         </tr>
-                          @endforeach
+                      @endforeach
+                      @endisset
+
                     </tbody>
                 </table>
                         <form class="form-inline" style="padding-top:20px;">

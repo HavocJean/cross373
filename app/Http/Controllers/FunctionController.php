@@ -131,7 +131,6 @@ public function adicionarcarrinhosessao(Request $r){
         }
     }
   }
-
   $cart[] = array(
     "idProdutos" => $r->input('idProdutos'),
     'nomeProdutos' => $r->input('nomeProdutos'),
@@ -145,18 +144,44 @@ public function adicionarcarrinhosessao(Request $r){
 }
 
 public function pegarcarrinho(){
-  $cart = session()->get('cart');
-   return view('carrinho')->with('cart', $cart);
+
+ $cart = session()->get('cart');
+ return view('carrinho')->with('cart', $cart);
   // echo "<pre>";
   // var_dump($cart);
 }
 
-public function deleta(Request $r){
+public function deletaSessao(Request $r){
+
   $teste = session()->flush('cart');
-   return view('carrinho');
+  return redirect()->action('FunctionController@storeProdutos');
   // echo "<pre>";
   // var_dump($cart);
 }
 
+public function deletarprodutocarrinho($id, Request $r){
 
+  $cart = $r->session()->get('cart');
+if (isset($cart)) {
+  foreach ($cart as $key => $value) {
+    if($value['idProdutos'] == $id) {
+      unset($cart[$key]);
+    }
+  }
+}
+  $r->session()->put('cart', $cart);
+  return redirect()->action('FunctionController@pegarcarrinho');
+}
+
+
+  // $cart = $r->session()->get('cart');
+  // if (isset($cart)) {
+  //   foreach ($cart as $key => $value) {
+  //       if ($value['idProdutos'] == $id) {
+  //         $cart = $r->session()->pull('cart', $key);
+  //         return redirect()->action('FunctionController@pegarcarrinho');
+  //         break;
+  //       }
+  //   }
+  // }
 }
