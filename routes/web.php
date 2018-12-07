@@ -40,6 +40,8 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('/deleta', 'FunctionController@deleta');
+
 Route::prefix('/admin')->name('admin')->group(function () {
   Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
   Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');

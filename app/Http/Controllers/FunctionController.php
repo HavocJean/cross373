@@ -119,11 +119,25 @@ public function escolherProduto($id, Request $r) {
 
 public function adicionarcarrinhosessao(Request $r){
   $cart = $r->session()->get('cart');
+
+
+  if (isset($cart)) {
+    foreach ($cart as $key => $value) {
+        if ($value['idProdutos'] == $r->input('idProdutos')) {
+          $cart[$key]['quantidadeProdutos'] =   $cart[$key]['quantidadeProdutos'] + $r->input('quantidadeProdutos');
+          $r->session()->put('cart', $cart);
+          return redirect()->action('FunctionController@pegarcarrinho');
+          break;
+        }
+    }
+  }
+
   $cart[] = array(
     "idProdutos" => $r->input('idProdutos'),
     'nomeProdutos' => $r->input('nomeProdutos'),
     'valorProdutos' => $r->input('valorProdutos'),
     'image' => $r->input('image'),
+    'quantidadeProdutos' => $r->input('quantidadeProdutos')
   );
   $r->session()->put('cart', $cart);
   $r->session()->flash('Sucesso', 'carrinho atualizado com sucesso');
@@ -132,9 +146,16 @@ public function adicionarcarrinhosessao(Request $r){
 
 public function pegarcarrinho(){
   $cart = session()->get('cart');
-  return view('carrinho')->with('cart', $cart);
+   return view('carrinho')->with('cart', $cart);
   // echo "<pre>";
-  // var_dump($cart[0]);
+  // var_dump($cart);
+}
+
+public function deleta(Request $r){
+  $teste = session()->flush('cart');
+   return view('carrinho');
+  // echo "<pre>";
+  // var_dump($cart);
 }
 
 

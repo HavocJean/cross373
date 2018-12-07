@@ -58,6 +58,7 @@
                   <input type="text" class="form-control" id="nomeProdutos" name="nomeProdutos" value="{{ $produto -> nomeProdutos }}" hidden>
                   <input type="number" class="form-control" id="valorProdutos" name="valorProdutos" value="{{ $produto -> valorProdutos }}" hidden>
                   <input type="text" class="form-control" id="image" name="image" value="../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" hidden>
+                  <input type="number" name="quantidadeProdutos" value="">
                   <button type="submit" class="btn btn-dark" style="width:180px;margin-top:25px;margin-left:0px;">Adicionar ao carrinho</button>
                 </form>
             </div>
