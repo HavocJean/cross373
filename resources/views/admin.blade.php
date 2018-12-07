@@ -5,20 +5,20 @@
 
     <h1 class="lista-admin" style="margin-top: 2%">Painel Administrativo - Cross 373</h1>
       <p style="font-size: 2em; text-align: center">O que você deseja fazer?</p>
-    <div class="container d-flex justify-content-around" style="margin-top: 2%; margin-bottom:2%">
+    <div class="container d-flex justify-content-around align-self-stretch" style="margin-top: 2%; margin-bottom:2%">
 
       <!-- Card de opções administrativas -->
 
-        <div class="card p-2 border border-dark" style="width: 18rem;">
+        <div class="card p-2 border border-dark align-self-stretch" style="margin: 0">
             <img class="card-img-top" src="../public/img/iconeCliente.PNG" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Clientes</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Painel administrativo para visualização, cadastro e atualização de clientes.</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item">Visualização da lista completa de clientes</li>
+              <li class="list-group-item">Cadastrar novo cliente</li>
+
             </ul>
             <div class="card-body">
               <a href="#" class="card-link">Card link</a>
@@ -26,16 +26,16 @@
             </div>
           </div>
 
-          <div class="card p-2 border border-dark" style="width: 18rem;">
+          <div class="card p-2 border border-dark align-self-stretch" style="margin: 0">
               <img class="card-img-top" src="../public/img/iconePlano.PNG" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Planos</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Painel administrativo para visualização, cadastro e atualização de planos.</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Visualização da lista completa de planos</li>
+                <li class="list-group-item">Cadastrar novo plano</li>
+
               </ul>
               <div class="card-body">
                 <a href="#" class="card-link">Card link</a>
@@ -43,16 +43,16 @@
               </div>
             </div>
 
-            <div class="card p-2 border border-dark" style="width: 18rem;">
+            <div class="card p-2 border border-dark align-self-stretch" style="margin: 0">
                 <img class="card-img-top" src="../public/img/iconeProduto.PNG" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Produtos</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Painel administrativo para visualização, cadastro e atualização de produtos.</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
+                  <li class="list-group-item">Visualização da lista completa de produtos</li>
+                  <li class="list-group-item">Cadastrar novo produto</li>
+
                 </ul>
                 <div class="card-body">
                   <a href="#" class="card-link">Card link</a>
@@ -60,18 +60,18 @@
                 </div>
               </div>
 
-              <div class="card p-2 border border-dark" style="width: 18rem;">
-                  <img class="card-img-top" src="../public/img/iconeTema.PNG" alt="Card image cap">
+              <div class="card p-2 border border-dark align-self-stretch" style="margin: 0">
+                  <img class="card-img-top align-self-stretch" src="../public/img/iconeTema.PNG" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Alterar Tema</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Painel administrativo para atualização de tema do site.</p>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Cras justo odio</li>
                     <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+
                   </ul>
-                  <div class="card-body">
+                  <div class="card-body align-self-stretch">
                   <button onclick="trocar()">Trocar Tema</button></a>
                   </div>
                 </div>
