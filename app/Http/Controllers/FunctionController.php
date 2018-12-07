@@ -115,7 +115,26 @@ public function escolherProduto($id, Request $r) {
 } else {
   return view('produto', array('produto' => $produto));
 }
+}
 
+public function adicionarcarrinhosessao(Request $r){
+  $cart = $r->session()->get('cart');
+  $cart[] = array(
+    "idProdutos" => $r->input('idProdutos'),
+    'nomeProdutos' => $r->input('nomeProdutos'),
+    'valorProdutos' => $r->input('valorProdutos'),
+    'image' => $r->input('image'),
+  );
+  $r->session()->put('cart', $cart);
+  $r->session()->flash('Sucesso', 'carrinho atualizado com sucesso');
+  return redirect()->action('FunctionController@pegarcarrinho');
+}
+
+public function pegarcarrinho(){
+  $cart = session()->get('cart');
+  return view('carrinho')->with('cart', $cart);
+  // echo "<pre>";
+  // var_dump($cart[0]);
 }
 
 

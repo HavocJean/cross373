@@ -7,6 +7,12 @@
         <div class="row">
             <div class="col-lg-8">
                 <h4>Carrinho de compra</h4>
+                  @foreach($cart as $k => $v)
+
+                    @foreach($v as $key => $value)
+                    {{$value }}</br>
+    @endforeach
+@endforeach
                 <table class="table">
                     <thead>
                         <tr>
@@ -16,6 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         <tr>
                             <td><img src="../public/img/cross1.jpg" style="width:80px;"><span style="padding-left:10px;">produto1 bla bla bla</span></td>
                             <td>2</td>
@@ -58,7 +65,7 @@
                     <div class="row botaocarrinho">
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-dark">Finalizar Pedido</button>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

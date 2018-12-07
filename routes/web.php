@@ -23,9 +23,10 @@ Route::get('/store', 'FunctionController@storeProdutos');
 
 Route::get('/produto/{id}', 'FunctionController@escolherProduto');
 
-Route::get('/carrinho', function () {
-    return view('carrinho');
-});
+Route::get('/addtocart', 'FunctionController@adicionarcarrinhosessao')->name('adicionarcarrinho');
+Route::post('/addtocart', 'FunctionController@adicionarcarrinhosessao')->name('adicionarcarrinho');
+
+Route::get('/carrinho', 'FunctionController@pegarcarrinho');
 
 Route::get('/contato', function () {
     return view('contato');
@@ -42,14 +43,12 @@ Route::get('/admin', function () {
 Route::prefix('/admin')->name('admin')->group(function () {
   Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
   Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+  Route::get('/produtos', 'FunctionController@mostrarProdutos');
+
+  Route::get('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+  Route::post('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+
+  Route::get('/deletarproduto/{id}', 'FunctionController@deletarProduto');
+  Route::post('/deletarproduto/{id}', 'FunctionController@deletarProduto');
+
 });
-
-
-
-Route::get('/admin/produtos', 'FunctionController@mostrarProdutos');
-
-Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
-Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
-
-Route::get('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');
-Route::post('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');

@@ -30,7 +30,7 @@
 								</div>
 								<div class="form-group col-md-4" >
 									<label for="customFile">Escolha a imagem</label>
-									<input type="file" class="form-control" id="customFile" name="image">
+									<input type="file" class="form-control" id="customFile" name="image" value="../storage/app/public/{{ $produto -> caminhoImagemProdutos }}">
 								</div>
 							</div>
 
