@@ -101,11 +101,21 @@ public function atualizarProduto($id,Request $r) {
 public function deletarProduto($id) {
   $produto = Produto::find($id);
   if(empty($produto)) {
-    return view('adminProdutos', array('msg' => 'Registro não encontrado'));
+    return view('adminProdutos', array('msg' => 'Registro não encontrado', 'produto' => $produto));
   } else {
     $produto->delete();
-    return view('adminProdutos', array('msg'=> 'Registro deletado com sucesso'));
+    return redirect()->action('FunctionController@mostrarProdutos')->with('msg', 'Registro Deletado Com Sucesso');
   }
+}
+
+public function escolherProduto($id, Request $r) {
+  $produto = Produto::find($id);
+  if($produto === null) {
+  return redirect()->action('FunctionController@storeProdutos')->with('msg', 'Produto Não Existe');
+} else {
+  return view('produto', array('produto' => $produto));
+}
+
 }
 
 

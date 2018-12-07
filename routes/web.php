@@ -21,9 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/store', 'FunctionController@storeProdutos');
 
-Route::get('/produto', function () {
-    return view('produto');
-});
+Route::get('/produto/{id}', 'FunctionController@escolherProduto');
 
 Route::get('/carrinho', function () {
     return view('carrinho');
@@ -41,10 +39,17 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto');
-Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto');
+Route::prefix('/admin')->name('admin')->group(function () {
+  Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+  Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
+});
 
-Route::get('/admin/admin-produtos', 'FunctionController@mostrarProdutos');
+
+
+Route::get('/admin/produtos', 'FunctionController@mostrarProdutos');
 
 Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
 Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+
+Route::get('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');
+Route::post('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');

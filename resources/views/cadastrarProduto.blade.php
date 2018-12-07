@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 @section('content')
@@ -41,8 +41,12 @@
 			</form>
 
 			@isset($msg)
-            <h2>{{ $msg }}</h2>
-            @endisset
+
+					<div class="alert alert-success">
+							{{ $msg }}
+					</div>
+
+			@endisset
 
 		</div>
 	</div>

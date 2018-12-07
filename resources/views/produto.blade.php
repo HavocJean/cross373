@@ -4,20 +4,20 @@
 @section('content')
 <div id= "todoproduto" class="container-fluid" style="padding-top:50px;text-align:left">
     <div class="container">
-    <h4>Nome do produto maior</h4>
+    <h4>{{ $produto -> nomeProdutos }}</h4>
         <div class="row">
             <div class="col-lg-5">
                 <div class="mainphoto">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:400px;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/galeria1.jpg" class="d-block w-100" src="..." alt="First slide">
+                                <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" class="d-block w-100" src="..." alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/galeria1.jpg" class="d-block w-100" src="..." alt="Second slide">
+                                <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" class="d-block w-100" src="..." alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/galeria1.jpg" class="d-block w-100" src="..." alt="Third slide">
+                                <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" class="d-block w-100" src="..." alt="Third slide">
                             </div>
                     </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -32,17 +32,17 @@
                 </div>
 
                 <div class="photo_item">
-                    <img src="img/galeria1.jpg" />
-                    <img src="img/galeria1.jpg" />
-                    <img src="img/galeria1.jpg" />
+                    <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" />
+                    <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" />
+                    <img src="../../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" />
                 </div>
             </div>
             <div class="col-lg-7" style="padding-top:10px;">
-                <h5 style="margin-bottom:0px;">Nome Produto: <b>Produto tal</b></h5> 
-                <small>Marca Produto: <b>Marca tal</b></small><br/>
+                <h5 style="margin-bottom:0px;">Nome Produto: <b>{{ $produto -> nomeProdutos }}</b></h5>
+                <small>Marca Produto: <b>{{ $produto -> categoriaProdutos }}</b></small><br/>
                 <p>Descriçao:
-                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                Preço: <span>R$ 999, 99</span><br/>
+                {{ $produto -> descricaoProdutos }}</p>
+                Preço: <span>R$ {{ $produto -> valorProdutos }}</span><br/>
 
                 <form class="form-inline" style="padding-top:20px;">
                     <div class="form-group">
@@ -62,25 +62,22 @@
     <table class="table table-striped">
         <tbody>
             <tr>
-                <td>Nome produto</td>
-                <td>Especificação</td>
+                <td>Nome do produto</td>
+                <td>{{ $produto -> nomeProdutos }}</td>
             </tr>
             <tr>
-                <td>Tipo produto</td>
-                <td>Especificação</td>
+                <td>Categoria do produto</td>
+                <td>{{ $produto -> categoriaProdutos }}</td>
             </tr>
             <tr>
-                <td>Mais infos</td>
-                <td>Especificação</td>
+                <td>Descrição</td>
+                <td>{{ $produto -> descricaoProdutos }}</td>
             </tr>
             <tr>
-                <td>Mais infos</td>
-                <td>Especificação</td>
+                <td>Valor do Produto</td>
+                <td>R$ {{ $produto -> valorProdutos }}</td>
             </tr>
-            <tr>
-                <td>Mais infos</td>
-                <td>Especificação</td>
-            </tr>
+
         </tbody>
     </table>
     </div>

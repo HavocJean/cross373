@@ -45,7 +45,7 @@
                       <div class="card">
                         <img class="card-img-top rounded img-thumbnail" src="../storage/app/public/{{ $produto -> caminhoImagemProdutos }}" alt="Card image">
                             <div class="card-body">
-                              <h4 class="card-title">{{ $produto -> nomeProdutos }}</h4>
+                              <h4 class="card-title"><a href="/cross373/public/produto/{{ $produto -> idProdutos }}">{{ $produto -> nomeProdutos }}</a></h4>
                               <p class="card-text">{{ $produto -> descricaoProdutos }}</p>
                             </div>
                     </div>
