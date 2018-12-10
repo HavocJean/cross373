@@ -76,7 +76,7 @@
   <div class="textohorarios">
       <h2>Horários</h2>
       <hr>
-      <p>Este é um parágrafo sobre os horários do Cross 373</p>
+      <p>Veja abaixo os horários disponíveis no Cross 373 e venha com a gente!</p>
   </div>
 </div>
 
@@ -105,7 +105,7 @@
       <br>
 
       <div class="divbotao">
-        <button type="button" class= "botaocontato btn btn-outline-dark " name="button">Agendar Experimental</button>
+      <a href="/cross373/public/contato" class= "botaocontato btn btn-outline-dark " name="button"> Agendar Experimental</a>
       </div>
 
     </div>
@@ -132,7 +132,7 @@
       </div>
       <br>
         <div class="divbotao">
-          <button type="button" class= "botaocontato btn btn-outline-dark " name="button">Agendar Experimental</button>
+          <a href="/cross373/public/contato" class= "botaocontato btn btn-outline-dark " name="button"> Agendar Experimental</a>
         </div>
 
     </div>
@@ -153,36 +153,36 @@
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card">
-        <img class="card-img-top rounded" src="img/cross1.jpg" alt="Card image">
+        <img class="card-img-top rounded" src="img/imgsobrenos2.png" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Crosstraining na Cross 373</h4>
-          <p class="card-text">Prática com Kettlebell.</p>
+          <h4 class="card-title">Treinamento com corda naval.</h4>
+          <p class="card-text">Treino de resistência na Cross 373.</p>
 
         </div>
       </div>
       <div class="card">
-  <img class="card-img-top rounded" src="img/galeria1.jpg" alt="Card image">
+  <img class="card-img-top rounded" src="img/galeria4.jpg" alt="Card image">
   <div class="card-body">
-    <h4 class="card-title">Crosstraining na Cross 373</h4>
-    <p class="card-text">Prática com Kettlebell.</p>
+    <h4 class="card-title">Treinamento com corda naval.</h4>
+    <p class="card-text">Treino de resistência na Cross 373.</p>
 
   </div>
 </div>
     </div>
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card">
-        <img class="card-img-top rounded" src="img/cross2.jpg" alt="Card image">
+        <img class="card-img-top rounded" src="img/galeria1.jpg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Crosstraining na Cross 373</h4>
-          <p class="card-text">Prática com Kettlebell.</p>
+          <h4 class="card-title">Treino com Kettlebell.</h4>
+          <p class="card-text">Treino de força na Cross 373.</p>
 
         </div>
       </div>
       <div class="card">
-  <img class="card-img-top rounded" src="img/galeria1.jpg" alt="Card image">
+  <img class="card-img-top rounded" src="img/cross2.jpg" alt="Card image">
   <div class="card-body">
-    <h4 class="card-title">Crosstraining na Cross 373</h4>
-    <p class="card-text">Prática com Kettlebell.</p>
+    <h4 class="card-title">Flexão com halteres.</h4>
+    <p class="card-text">Treino de força na Cross 373.</p>
 
   </div>
 </div>
@@ -191,16 +191,16 @@
       <div class="card" >
         <img class="card-img-top rounded" src="img/cross3.jpg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">Crosstraining na Cross 373</h4>
-          <p class="card-text">Prática com Kettlebell.</p>
+          <h4 class="card-title">Salto na Plyo Box</h4>
+          <p class="card-text">Treino de potência na Cross 373.</p>
 
         </div>
       </div>
       <div class="card">
   <img class="card-img-top rounded" src="img/galeria3.jpg" alt="Card image">
   <div class="card-body">
-    <h4 class="card-title">Crosstraining na Cross 373</h4>
-    <p class="card-text">Prática com Kettlebell.</p>
+    <h4 class="card-title">Treinamento com trenó na Cross 373</h4>
+    <p class="card-text">Treino de potência na Cross 373.</p>
 
   </div>
 </div>
