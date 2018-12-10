@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/store', 'FunctionController@storeProdutos');
+Route::get('/store', 'FunctionController@storeProdutos')->name('store');
 
 Route::get('/storeplanos', 'FunctionController@storePlanos');
 

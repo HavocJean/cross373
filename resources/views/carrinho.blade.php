@@ -23,7 +23,7 @@
                         <tr>
                             <td><img src="{{ $v['image'] }}" style="width:80px;"><span style="padding-left:10px;">  {{ $v['nomeProdutos']}}</span></td>
                             <td>  {{ $v['quantidadeProdutos']}}</td>
-                            <td>  {{ $v['valorProdutos']}}</td>
+                            <td>  R$ {{ $v['valorProdutos']}}</td>
                             <td> <a href="/cross373/public/deletarprodutocarrinho/{{ $v['idProdutos'] }}">X</a> </td>
                         </tr>
                       @endforeach
@@ -31,6 +31,10 @@
 
                     </tbody>
                 </table>
+
+                <form class="form-inline" action="{{ route('store')}}" method="get">
+                  <button type="submit" class="btn btn-dark">Continuar comprando</button>
+                </form>
                         <!-- <form class="form-inline" style="padding-top:20px;">
                             <div class="form-group">
                                 <label for="calcular" style="margin-left:0px;padding-right:10px;">Calcular frete</label>
@@ -41,7 +45,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="caixacarrinho">
-                    <h4> resumo do pedido </h4>
+                    <h4> RESUMO DO PEDIDO: </h4>
                     <div class="row">
                         <div class="col-6">Subtotal</div>
                         <div class="col-6">
