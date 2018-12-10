@@ -49,20 +49,20 @@ Route::get('/update', function () {
 });
 
 Route::get('/admin', function () {
-    return view('admin')->middleware('auth');
+    return view('admin');
 });
 
 
-  Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto')->middleware('auth');
-  Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto')->middleware('auth');
+  Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
+  Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
 
-  Route::get('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano')->middleware('auth');
-  Route::post('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano')->middleware('auth');
+  Route::get('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano');
+  Route::post('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano');
 
-  Route::get('/admin/produtos', 'FunctionController@mostrarProdutos')->name('mostrarProdutos')->middleware('auth');
+  Route::get('/admin/produtos', 'FunctionController@mostrarProdutos')->name('mostrarProdutos');
 
-  Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto')->middleware('auth');
-  Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto')->middleware('auth');
+  Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+  Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
 
-  Route::get('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto')->middleware('auth');
-  Route::post('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto')->middleware('auth');
+  Route::get('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');
+  Route::post('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');
