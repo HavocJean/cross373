@@ -6,7 +6,7 @@
 <!-- Banner -->
       <div class="bannerstore">
         <div class="bannerbg">
-            <h2 id="titulobanner"><hr>Escolha seu Plano agora!<hr></h2>
+            <h2 id="titulobanner"><hr>Complete seu treino com nossos produtos!<hr></h2>
       </div>
     </div>
   <!-- Fim do Banner -->
@@ -19,21 +19,18 @@
                     </form>
                     <div class="titulomenu">
                       <br>
-                      <p> <strong>PLANOS DISPONÍVEIS</strong> </p>
+                      <p> <strong>CATEGORIAS</strong> </p>
                       <br>
                       <hr>
                     </div>
                     <ul class="listamenu">
-                      <li>CrossTraining</li>
+                      <li>Treinamento Funcional</li>
                       <li><hr></li>
-                      <li>Planos de Crédito</li>
+                      <li>Acessórios</li>
                       <li><hr></li>
-                      <li>Planos Mensais</li>
+                      <li>Roupas</li>
                       <li><hr></li>
-                      <li>Planos Semestrais</li>
-                      <li><hr></li>
-                      <li>Planos Recorrentes</li>
-                      <li><hr></li>
+                      
                     </ul>
                 </div>
 

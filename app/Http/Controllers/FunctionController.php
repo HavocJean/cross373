@@ -50,7 +50,7 @@ public function cadastrarProduto(Request $r) {
     //$novo_produto->caminhoImagemProdutos = $r->input('caminhoImagemProdutos');
     //$imagem = $r->image->store('categories', $nameFile);
     $novo_produto->caminhoImagemProdutos = $r->image->storeAs('img', $nameFile);
-    $novo_produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
+
 
     if ($novo_produto->save()) {
       return view('cadastrarProduto',
@@ -86,7 +86,7 @@ public function atualizarProduto($id,Request $r) {
   $produto->categoriaProdutos = $r->input('categoriaProdutos');
   $produto->valorProdutos = $r->input('valorProdutos');
   $produto->caminhoImagemProdutos = $r->image->storeAs('img', $nameFile);
-  $produto->dataUltimaAtualProdutos = date('Y-m-d H:i:s');
+  
 
   if ($produto->save()) {
     return view('atualizarProduto',
