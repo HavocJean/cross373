@@ -7,6 +7,7 @@ use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use \App\Produto as Produto;
+use \App\Plano as Plano;
 use \App\User;
 
 class FunctionController extends Controller
@@ -20,6 +21,11 @@ public function mostrarProdutos(){
 public function storeProdutos(){
   $produtos = Produto::All();
   return view('store', array('produtos' => $produtos));
+}
+
+public function storePlanos(){
+  $planos = Plano::All();
+  return view('storeplanos', array('planos' => $planos));
 }
 
 
@@ -62,6 +68,46 @@ public function cadastrarProduto(Request $r) {
   }
 }
 
+public function cadastrarPlano(Request $r) {
+  if ($r->isMethod('get')) {
+    return view('cadastrarPlano');
+  }
+  $nameFile = null;
+  if ($r->image) {
+    $novo_plano = new Plano;
+
+    // Define um aleatório para o arquivo baseado no timestamps atual
+    $name = uniqid(date('HisYmd'));
+    // Recupera a extensão do arquivo
+    $extension = $r->image->extension();
+    // Define finalmente o nome
+    $nameFile = "{$name}.{$extension}";
+
+    // Faz o upload
+    //$upload = $r->image->storeAs('img', $nameFile);
+    /*$r->file('image')->move(
+      base_path().'/public/img/'
+    );*/
+    $novo_plano->nomePlanos = $r->input('nomePlanos');
+    $novo_plano->descricaoPlanos = $r->input('descricaoPlanos');
+    $novo_plano->validadePlanos = $r->input('validadePlanos');
+    $novo_plano->valorPlanos = $r->input('valorPlanos');
+    $novo_plano->valorAdesaoPlanos = 99;
+
+    //$novo_plano->caminhoImagemPlanos = $r->input('caminhoImagemPlanos');
+    //$imagem = $r->image->store('categories', $nameFile);
+    $novo_plano->caminhoImagemPlanos = $r->image->storeAs('img', $nameFile);
+
+
+    if ($novo_plano->save()) {
+      return view('cadastrarPlano',
+      array('msg' => 'Plano gravado com sucesso'));
+    } else {
+      return view('cadastrarPlano',
+      array('msg' => 'Erro na gravação do Plano'));
+    }
+  }
+}
 
 public function atualizarProduto($id,Request $r) {
   if ($r->isMethod('get')) {
@@ -86,7 +132,7 @@ public function atualizarProduto($id,Request $r) {
   $produto->categoriaProdutos = $r->input('categoriaProdutos');
   $produto->valorProdutos = $r->input('valorProdutos');
   $produto->caminhoImagemProdutos = $r->image->storeAs('img', $nameFile);
-  
+
 
   if ($produto->save()) {
     return view('atualizarProduto',

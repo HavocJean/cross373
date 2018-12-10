@@ -57,7 +57,7 @@
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/cross373/public/store">Planos</a>
+                              <a class="dropdown-item" href="/cross373/public/storeplanos">Planos</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="/cross373/public/store">Produtos Fitness</a>
                             </div>

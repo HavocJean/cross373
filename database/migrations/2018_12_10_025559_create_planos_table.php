@@ -14,12 +14,14 @@ class CreatePlanosTable extends Migration
     public function up()
     {
         Schema::create('planos', function (Blueprint $table) {
+          
             $table->increments('idPlanos');
             $table->string('nomePlanos', 100);
             $table->string('descricaoPlanos', 200);
             $table->integer('validadePlanos');
             $table->integer('valorPlanos');
             $table->integer('valorAdesaoPlanos');
+            $table->string('caminhoImagemPlanos', 200);
             $table->timestamps();
         });
     }

@@ -8,7 +8,7 @@
             <div class="col-lg-8">
                 <h4>Carrinho de compra</h4>
 
-                <table class="table">
+                <table class="table" style="text-align: center">
                     <thead>
                         <tr>
                             <th scope="col">Produto</th>
@@ -21,7 +21,7 @@
                       @isset($cart)
                       @foreach($cart as $k => $v)
                         <tr>
-                            <td><img src="../public/img/cross1.jpg" style="width:80px;"><span style="padding-left:10px;">  {{ $v['nomeProdutos']}}</span></td>
+                            <td><img src="{{ $v['image'] }}" style="width:80px;"><span style="padding-left:10px;">  {{ $v['nomeProdutos']}}</span></td>
                             <td>  {{ $v['quantidadeProdutos']}}</td>
                             <td>  {{ $v['valorProdutos']}}</td>
                             <td> <a href="/cross373/public/deletarprodutocarrinho/{{ $v['idProdutos'] }}">X</a> </td>
@@ -31,13 +31,13 @@
 
                     </tbody>
                 </table>
-                        <form class="form-inline" style="padding-top:20px;">
+                        <!-- <form class="form-inline" style="padding-top:20px;">
                             <div class="form-group">
                                 <label for="calcular" style="margin-left:0px;padding-right:10px;">Calcular frete</label>
                                 <input type="text" class="form-control" id="calcular" placeholder="______-__" style="width:160px;">
                             </div>
                             <button type="submit" class="btn btn-dark">Ok</button>
-                        </form>
+                        </form> -->
             </div>
             <div class="col-lg-4">
                 <div class="caixacarrinho">

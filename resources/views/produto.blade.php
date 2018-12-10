@@ -44,13 +44,13 @@
                 {{ $produto -> descricaoProdutos }}</p>
                 Preço: <span>R$ {{ $produto -> valorProdutos }}</span><br/>
 
-                <form class="form-inline" style="padding-top:20px;">
+                <!-- <form class="form-inline" style="padding-top:20px;">
                     <div class="form-group">
                         <label for="calcular" style="margin-left:0px;padding-right:10px;">Calcular frete</label>
                         <input type="text" class="form-control" id="calcular" placeholder="______-__" style="width:160px;">
                     </div>
                     <button type="submit" class="btn btn-dark">Ok</button>
-                </form>
+                </form> -->
 
                 <form class="form-inline" action="{{ route('adicionarcarrinho')}}" method="post">
                   {!! csrf_field() !!}

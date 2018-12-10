@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/store', 'FunctionController@storeProdutos');
 
+Route::get('/storeplanos', 'FunctionController@storePlanos');
+
 Route::get('/produto/{id}', 'FunctionController@escolherProduto');
 
 Route::get('/addtocart', 'FunctionController@adicionarcarrinhosessao')->name('adicionarcarrinho');
@@ -49,6 +51,10 @@ Route::get('/admin', function () {
 
   Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
   Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
+
+  Route::get('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano');
+  Route::post('/admin/cadastrarplano', 'FunctionController@cadastrarPlano')->name('cadastrarPlano');
+
   Route::get('/admin/produtos', 'FunctionController@mostrarProdutos')->name('mostrarProdutos');
 
   Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
