@@ -43,16 +43,41 @@
                 <div class="caixacarrinho">
                     <h4> resumo do pedido </h4>
                     <div class="row">
-                        <div class="col-6">subotal</div>
-                        <div class="col-6">R$ 250,00</div>
+                        <div class="col-6">Subtotal</div>
+                        <div class="col-6">
+                          @isset($cart)
+
+                            <?php
+                            $valorTotal = 0;
+                              foreach ($cart as $key => $item) {
+                                $valorTotal += $item['valorProdutos'];
+                              }
+
+                            echo 'R$ '.$valorTotal ?>
+
+
+                          @endisset
+                        </div>
                     </div>
                     <div class="row" style="border-bottom:1px solid #CCC;">
-                        <div class="col-6">frete</div>
-                        <div class="col-6" style="margin-bottom:10px;">-</div>
+                        <div class="col-6">Frete Único</div>
+                        <div class="col-6" style="margin-bottom:10px;">R$ 40</div>
                     </div>
                     <div class="row" style="font-weight:bold;padding-top:5px;font-size:18px;">
                         <div class="col-6">total</div>
-                        <div class="col-6">R$ 350,00</div>
+                        <div class="col-6">@isset($cart)
+
+                          <?php
+                          $valorTotal = 0;
+                            foreach ($cart as $key => $item) {
+                              $valorTotal += $item['valorProdutos'];
+                            }
+
+                          $valorTotal = $valorTotal + 40;
+                          echo 'R$ '.$valorTotal?>
+
+
+                        @endisset</div>
                     </div>
                     <div class="row" style="border-bottom:1px solid #CCC;">
                         <div class="col-6"></div>
@@ -60,7 +85,9 @@
                     </div>
                     <div class="row botaocarrinho">
                         <div class="col-12 text-center">
+                          <form class="form-inline" action="{{ route('thankyoupage')}}" method="get">
                             <button type="submit" class="btn btn-dark">Finalizar Pedido</button>
+                          </form>
                         </div>
                     </div>
                 </div>
