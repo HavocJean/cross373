@@ -173,15 +173,4 @@ if (isset($cart)) {
   return redirect()->action('FunctionController@pegarcarrinho');
 }
 
-
-  // $cart = $r->session()->get('cart');
-  // if (isset($cart)) {
-  //   foreach ($cart as $key => $value) {
-  //       if ($value['idProdutos'] == $id) {
-  //         $cart = $r->session()->pull('cart', $key);
-  //         return redirect()->action('FunctionController@pegarcarrinho');
-  //         break;
-  //       }
-  //   }
-  // }
 }

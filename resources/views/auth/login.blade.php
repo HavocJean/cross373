@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-12" style="padding: 0">
-            <div class="card">
+<div class="container-fluid" >
+    <div class="row justify-content-center" style="height: 400px">
+      <div class="col-lg-7 imagem-auth" >
+      </div>
+        <div class="col-md-5" style="padding: 0">
+            <div class="card" style="height: 400px">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">

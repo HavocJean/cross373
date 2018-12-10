@@ -30,7 +30,7 @@
       <!-- Menu com logo e login / register -->
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <img src="../public/img/logo-cross373-fav.jpeg" alt="" class="navbar-brand" width="100"/>
+                <a href="/cross373/public/"><img src="../public/img/logo-cross373-fav.jpeg" alt="" class="navbar-brand" width="100"/></a>
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     Cross 373
                 </a> -->
@@ -43,23 +43,23 @@
                     <ul class="navbar-nav mr-auto">
 
                           <li class="nav-item active">
-                            <a class="nav-link" href="http://localhost/cross373/public/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/cross373/public/">Home <span class="sr-only">(current)</span></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/cross373/public/#sobre">Sobre</a>
+                            <a class="nav-link" href="/cross373/public/#sobre">Sobre</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/cross373/public/#horarios">Horários</a>
+                            <a class="nav-link" href="/cross373/public/#horarios">Horários</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/cross373/public/contato">Contato</a>
+                            <a class="nav-link" href="/cross373/public/contato">Contato</a>
                           </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="http://localhost/cross373/public/store">Planos</a>
+                              <a class="dropdown-item" href="/cross373/public/store">Planos</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="http://localhost/cross373/public/store">Produtos Fitness</a>
+                              <a class="dropdown-item" href="/cross373/public/store">Produtos Fitness</a>
                             </div>
                           </li>
 

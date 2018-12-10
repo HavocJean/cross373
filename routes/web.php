@@ -47,15 +47,12 @@ Route::get('/admin', function () {
 });
 
 
-Route::prefix('/admin')->name('admin')->group(function () {
-  Route::get('/cadastrarproduto', 'FunctionController@cadastrarProduto');
-  Route::post('/cadastrarproduto', 'FunctionController@cadastrarProduto');
-  Route::get('/produtos', 'FunctionController@mostrarProdutos');
+  Route::get('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
+  Route::post('/admin/cadastrarproduto', 'FunctionController@cadastrarProduto')->name('cadastrarProduto');
+  Route::get('/admin/produtos', 'FunctionController@mostrarProdutos')->name('mostrarProdutos');
 
-  Route::get('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
-  Route::post('/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+  Route::get('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
+  Route::post('/admin/atualizarproduto/{id}', 'FunctionController@atualizarProduto');
 
-  Route::get('/deletarproduto/{id}', 'FunctionController@deletarProduto');
-  Route::post('/deletarproduto/{id}', 'FunctionController@deletarProduto');
-
-});
+  Route::get('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');
+  Route::post('/admin/deletarproduto/{id}', 'FunctionController@deletarProduto');

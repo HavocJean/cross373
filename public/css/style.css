@@ -74,7 +74,16 @@ nav {
 
 }
 
+.imagem-auth{
+  background-image: url('../img/imgregistro.jpg');
+  background-size: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
 
+
+}
 
 /* Horarios e galeria */
 
@@ -232,7 +241,7 @@ h2.menu-section-title {
 .card {
   margin: auto;
   text-align: center;
-  width: 400px;
+  width: 100%;
 }
 
 
@@ -324,8 +333,8 @@ h2.menu-section-title {
 /* menu store */
 .menustore {
   background-color: black;
-  
- 
+
+
 }
 
 .menublank {
@@ -416,12 +425,12 @@ h2.menu-section-title {
 .tabela-admin {
   width: 90%;
   margin: 1% auto ;
-  text-align: center; 
+  text-align: center;
 }
 .tabela-admin th,td{
   border: 1px solid black;
   padding: 10px;
- 
+
 }
 .tabela-admin tr:hover {
   background-color: #f5f5f5;
@@ -473,7 +482,7 @@ h2.menu-section-title {
   .newsletter {
     padding-bottom: 10px;
   }
-  
+
   .mapa {
     padding-left: 25px;
   }
